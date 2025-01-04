@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Faculty>
+  <FacultyID FID="F001">
+    <FNAME>Liberal Arts and Prof. Study</FNAME>
+    <FEmail>lapds@yorku.ca</FEmail>
+  </FacultyID>
+  <FacultyID FID="F002">
+    <FNAME>Liberal Arts and Prof. Study</FNAME>
+    <FEmail>lapds@yorku.ca</FEmail>
+  </FacultyID>
+  <FacultyID FID="F003">
+    <FNAME>Engineering</FNAME>
+    <FEmail>enginnering@yorku.ca</FEmail>
+  </FacultyID>
+  <FacultyID FID="F004">
+    <FNAME>Engineering</FNAME>
+    <FEmail>enginnering@yorku.ca</FEmail>
+  </FacultyID>
+  <FacultyID FID="F005">
+    <FNAME>Law</FNAME>
+    <FEmail>enginnering@yorku.ca</FEmail>
+  </FacultyID>
+  <FacultyID FID="F006">
+    <FNAME>Health</FNAME>
+    <FEmail>health@yorku.ca</FEmail>
+  </FacultyID>
+  <FacultyID FID="F007">
+    <FNAME>Education</FNAME>
+    <FEmail>education@yorku.ca</FEmail>
+  </FacultyID>
+  <FacultyID FID="F008">
+    <FNAME>Graduate Studies</FNAME>
+    <FEmail>graduatestudies@yorku.ca</FEmail>
+  </FacultyID>
+</Faculty>

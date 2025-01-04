@@ -1,0 +1,414 @@
+ ----------------------------------------- -------- ----------------------------
+ SID                                       NOT NULL CHAR(4)
+ SNAME                                              VARCHAR2(25)
+ SLNAME                                             VARCHAR2(25)
+ SEMAIL                                             VARCHAR2(50)
+ GPA                                                FLOAT(126)
+ DOID                                               REF OF DEP_T
+
+SQL> insert into section_table values (section_t('SC001',40,'DB001', (select ref(c) from course_table c where c.cid = 'ITEC1001'),
+  2  (select ref(f) from faculty_table f where f.faculty_id = 'F001'),
+  3  (select ref(s) from student_table s where s.sid = 'S001')));
+
+1 row created.
+
+SQL> insert into section_table values (section_t('SC002',35,'SC002', (select ref(c) from course_table c where c.cid = 'ITEC4020'),
+  2  (select ref(f) from faculty_table f where f.faculty_id = 'F002'),
+  3  (select ref(s) from student_table s where s.sid = 'S009')));
+
+1 row created.
+
+SQL> insert into section_table values (section_t('SC003',27,'AWE104', (select ref(c) from course_table c where c.cid = 'CS1001'),
+  2  (select ref(f) from faculty_table f where f.faculty_id = 'F003'),
+  3  (select ref(s) from student_table s where s.sid = 'S005')));
+
+1 row created.
+
+SQL> insert into section_table values (section_t('SC004',36,'DB201', (select ref(c) from course_table c where c.cid = 'CS1002'),
+  2  (select ref(f) from faculty_table f where f.faculty_id = 'F004'),
+  3  (select ref(s) from student_table s where s.sid = 'S005')));
+
+1 row created.
+
+SQL> insert into section_table values (section_t('SC005',41,'AW003', (select ref(c) from course_table c where c.cid = 'ITEC1001'),
+  2  (select ref(f) from faculty_table f where f.faculty_id = 'F001'),
+  3  (select ref(s) from student_table s where s.sid = 'S009')));
+
+1 row created.
+
+SQL> insert into section_table values (section_t('SC006',55,'DB001', (select ref(c) from course_table c where c.cid = 'NRS4240'),
+  2  (select ref(f) from faculty_table f where f.faculty_id = 'F006'),
+  3  (select ref(s) from student_table s where s.sid = 'S003')));
+
+1 row created.
+
+SQL> insert into section_table values (section_t('SC007',71,'AD004', (select ref(c) from course_table c where c.cid = 'NRS1001'),
+  2  (select ref(f) from faculty_table f where f.faculty_id = 'F006'),
+  3  (select ref(s) from student_table s where s.sid = 'S003')));
+
+1 row created.
+
+SQL> insert into section_table values (section_t('SC008',165,'SC401', (select ref(c) from course_table c where c.cid = 'LW1001'),
+  2  (select ref(f) from faculty_table f where f.faculty_id = 'F005'),
+  3  (select ref(s) from student_table s where s.sid = 'S004')));
+
+1 row created.
+
+SQL> insert into section_table values (section_t('SC009',18,'AW206', (select ref(c) from course_table c where c.cid = 'GP6420'),
+  2  (select ref(f) from faculty_table f where f.faculty_id = 'F008'),
+  3  (select ref(s) from student_table s where s.sid = 'S008')));
+
+1 row created.
+
+SQL> insert into section_table values (section_t('SC010',44,'AWE306', (select ref(c) from course_table c where c.cid = 'CS1001'),
+  2  (select ref(f) from faculty_table f where f.faculty_id = 'F003'),
+  3  (select ref(s) from student_table s where s.sid = 'S002')));
+
+1 row created.
+
+SQL> create type transcript_t as obkect(transcript_id char(4), soid ref student_t, csid ref section_t,
+  2  order member function calculateGpa (
+  3  /
+
+Warning: Type created with compilation errors.
+
+SQL> drop type transcript_t;
+
+Type dropped.
+
+SQL> create type transcript_t as obkect(transcript_id char(4), gpa float, soid ref student_t, csid ref section_t,
+  2  order member function calculateGpa (gpa in transcript_t) return float is
+  3  result float := 0;
+  4  begin
+  5  if self.gpa < 2.5 then
+  6  result ;= -1;
+  7  else
+  8  if self.gpa >2.5 then result := 1;
+  9  end if;
+ 10  end if
+ 11  return result;/
+ 12  /
+
+Warning: Type created with compilation errors.
+
+SQL> drop type transcript_t;
+
+Type dropped.
+
+SQL> create type transcript_t as obkect(transcript_id char(4), gpa float, soid ref student_t, csid ref section_t,
+  2  order member function calculateGpa (gpa in transcript_t) return float);
+  3  /
+
+Warning: Type created with compilation errors.
+
+SQL> show errors
+Errors for TYPE TRANSCRIPT_T:
+
+LINE/COL ERROR
+-------- -----------------------------------------------------------------
+1/22     PLS-00103: Encountered the symbol "OBKECT" when expecting one of
+         the following:
+         array varray table object fixed varying opaque sparse
+         The symbol "object was inserted before "OBKECT" to continue.
+
+SQL> create type transcript_t as object(transcript_id char(4), gpa float, soid ref student_t, csid ref section_t,
+  2  order member function calculateGpa (gpa in transcript_t) return float);
+  3  /
+
+Type created.
+
+SQL> create type body transcipt_t as
+  2  order member function calculateGpa(gpa in transcript_t) return float is
+  3  result :=0;
+  4  begin
+  5  if self.gpa <2
+  6  then
+  7  result :=-1;
+  8  else
+  9  if self.gpa >2 then result :=1;
+ 10  end if;
+ 11  end if;
+ 12  return result;
+ 13  end;
+ 14  end;
+ 15  /
+
+Warning: Type Body created with compilation errors.
+
+SQL> show errors
+Errors for TYPE BODY TRANSCIPT_T:
+
+LINE/COL ERROR
+-------- -----------------------------------------------------------------
+3/8      PLS-00103: Encountered the symbol "=" when expecting one of the
+         following:
+         constant exception <an identifier>
+         <a double-quoted delimited-identifier> table long double ref
+         char time timestamp interval date binary national character
+         nchar
+         The symbol "<an identifier>" was substituted for "=" to continue.
+
+
+SQL> order member function calculateGpa(gpa in transcript_t) return float is
+SP2-0734: unknown command beginning "order memb..." - rest of line ignored.
+SQL> create type body transcipt_t as
+  2  order member function calculateGpa(gpa in transcript_t) return float is
+  3  result := 0;
+  4  begin
+  5  if self.gpa < 2 then
+  6  result := -1;
+  7  else
+  8  if self.gpa > 2 then result := 1;
+  9  end if;
+ 10  end if;
+ 11  return result;
+ 12  end;
+ 13  end;
+ 14  /
+create type body transcipt_t as
+                 *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
+
+
+SQL> drop type body transcript_t;
+drop type body transcript_t
+*
+ERROR at line 1:
+ORA-04043: object TRANSCRIPT_T does not exist
+
+
+SQL> drop body type transcript_t;
+drop body type transcript_t
+     *
+ERROR at line 1:
+ORA-00950: invalid DROP option
+
+
+SQL> dop type body transcript_t;
+SP2-0734: unknown command beginning "dop type b..." - rest of line ignored.
+SQL> ddop type body transcript_t;
+SP2-0734: unknown command beginning "ddop type ..." - rest of line ignored.
+SQL> drop type body transcript_t;
+drop type body transcript_t
+*
+ERROR at line 1:
+ORA-04043: object TRANSCRIPT_T does not exist
+
+
+SQL> desc transcript_t
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ TRANSCRIPT_ID                                      CHAR(4)
+ GPA                                                FLOAT(126)
+ SOID                                               REF OF STUDENT_T
+ CSID                                               REF OF SECTION_T
+
+METHOD
+------
+ ORDER MEMBER FUNCTION CALCULATEGPA RETURNS NUMBER
+ Argument Name                  Type                    In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GPA                            TRANSCRIPT_T            IN
+
+SQL> insert into transcript_table values(transcript_t('T001',2.75,
+  2  (select ref(s) from student_table s where s.sid='S001'),
+  3  (select ref(cs) from section_table cs where cs.section_id = 'SC001')));
+insert into transcript_table values(transcript_t('T001',2.75,
+            *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> desc transcript_table;
+ERROR:
+ORA-04043: object transcript_table does not exist
+
+
+SQL> create table transcript_table of transcript_t (transcript_id primary key);
+
+Table created.
+
+SQL> insert into transcript_table values(transcript_t('T001',2.75,
+  2  (select ref(s) from student_table s where s.sid='S001'),
+  3  (select ref(cs) from section_table cs where cs.section_id = 'SC001')));
+
+1 row created.
+
+SQL> insert into transcript_table values(transcript_t('T002',3.18,
+  2  (select ref(s) from student_table s where s.sid='S002'),
+  3  (select ref(cs) from section_table cs where cs.section_id = 'SC010')));
+
+1 row created.
+
+SQL> insert into transcript_table values(transcript_t('T003',3.88,
+  2  (select ref(s) from student_table s where s.sid='S003'),
+  3  (select ref(cs) from section_table cs where cs.section_id = 'SC007')));
+
+1 row created.
+
+SQL> insert into transcript_table values(transcript_t('T004',3.18,
+  2  (select ref(s) from student_table s where s.sid='S008'),
+  3  (select ref(cs) from section_table cs where cs.section_id = 'SC009')));
+
+1 row created.
+
+SQL> insert into transcript_table values(transcript_t('T005',2.94,
+  2  (select ref(s) from student_table s where s.sid='S009'),
+  3  (select ref(cs) from section_table cs where cs.section_id = 'SC005')));
+
+1 row created.
+
+SQL> create type attn_t as object(attn_id char(5), sturecord varchar2(10), schedule varchar2(25), soid ref student_t, cs ref section_t,
+  2  member function trackingRecord return varchar2,
+  3  member function generateRecord return varchar2);
+  4  /
+
+Type created.
+
+SQL> create type body attn_t as
+  2  member function trackingRecord return varchar2
+  3  is
+  4  begin
+  5  return 'Record of students for attendance';
+  6  end;
+  7  member function generateReport return varhcar2
+  8  is
+  9  begin
+ 10  return self.sturecord;
+ 11  emd;
+ 12  /
+
+Warning: Type Body created with compilation errors.
+
+SQL> drop type body attn_t;
+
+Type body dropped.
+
+SQL> SQL> create type body attn_t as
+SP2-0734: unknown command beginning "SQL> creat..." - rest of line ignored.
+  2  member function trackingRecord return varchar2
+  3  is
+  4  begin
+  5  return 'Record of students for attendance';
+  6  end;
+  7  member function generateReport return varhcar2
+  8  is
+  9  begin
+SQL> SQL> SQL> SQL> SQL> SQL> SQL> SQL>  10  return self.sturecord;
+SQL> end;
+SP2-0042: unknown command "end" - rest of line ignored.
+SQL> end;
+SP2-0042: unknown command "end" - rest of line ignored.
+SQL> /
+ member function trackingRecord return varchar2
+ *
+ERROR at line 2:
+ORA-00933: SQL command not properly ended
+
+
+SQL> create type body attn_t as
+  2  member function trackingRecord return varchar2
+  3  is
+  4  begin
+  5  return 'Record of students for attendance';
+  6  end;
+  7  member function generateReport return varhcar2
+  8  is
+  9  begin
+ 10  return self.sturecord;
+ 11  end;
+ 12  end;
+ 13  /
+
+Warning: Type Body created with compilation errors.
+
+SQL> show errors
+Errors for TYPE BODY ATTN_T:
+
+LINE/COL ERROR
+-------- -----------------------------------------------------------------
+3/17     PLS-00538: subprogram or cursor 'GENERATERECORD' is declared in
+         an object type specification and must be defined in the object
+         type body
+
+7/8      PL/SQL: Item ignored
+7/17     PLS-00539: subprogram 'GENERATEREPORT' is declared in an object
+         type body and must be defined in the object type specification
+
+7/39     PLS-00201: identifier 'VARHCAR2' must be declared
+SQL> create type payment as object(payment_id char(4), amount integer, date varchar2(50), tsid ref transcript_t,
+  2  member function processPayment return varchar2,
+  3  member function generateReport return varchar2) not final;
+  4  /
+
+Warning: Type created with compilation errors.
+
+SQL> show error
+Errors for TYPE PAYMENT:
+
+LINE/COL ERROR
+-------- -----------------------------------------------------------------
+0/0      PL/SQL: Compilation unit analysis terminated
+1/60     PLS-00330: invalid use of type name or subtype name
+SQL> create type payment as object(payment_id char(4), amount integer, date varchar2(50), tsid ref transcript_t);
+  2  /
+
+Warning: Type created with compilation errors.
+
+SQL> show error
+Errors for TYPE PAYMENT:
+
+LINE/COL ERROR
+-------- -----------------------------------------------------------------
+0/0      PL/SQL: Compilation unit analysis terminated
+1/60     PLS-00330: invalid use of type name or subtype name
+SQL> create type payment_t  as object(payment_id char(4), amount integer, date varchar2(50), tsid ref transcript_t)not final ;
+  2  /
+
+Warning: Type created with compilation errors.
+
+SQL> show errors
+Errors for TYPE PAYMENT_T:
+
+LINE/COL ERROR
+-------- -----------------------------------------------------------------
+0/0      PL/SQL: Compilation unit analysis terminated
+1/63     PLS-00330: invalid use of type name or subtype name
+SQL> drop type payment_t;
+
+SQL> desc payment_t;
+ERROR:
+ORA-24372: invalid object for describe
+
+
+SQL> create type pay_t as object(pay_id char(4), amount float, pay_date varchar2(50), ts ref transcript_t);
+  2  /
+
+Type created.
+
+SQL> create table payment_table of pay_t;
+
+Table created.
+
+SQL> insert into payment_table values( pay_t('P001',300, '2023-08-21',
+  2  (select ref(ts) from transcript_table ts where ts.transcript_id = 'T001')));
+
+1 row created.
+
+SQL> insert into payment_table values( pay_t('P002',500, '2022-08-21',
+  2  (select ref(ts) from transcript_table ts where ts.transcript_id = 'T002')));
+
+1 row created.
+
+SQL> insert into payment_table values( pay_t('P003',1200, '2023-09-29',
+  2  (select ref(ts) from transcript_table ts where ts.transcript_id = 'T003')));
+
+1 row created.
+
+SQL> insert into payment_table values( pay_t('P004',2400, '2023-09-27',
+  2  (select ref(ts) from transcript_table ts where ts.transcript_id = 'T004')));
+
+1 row created.
+
+SQL> spool off

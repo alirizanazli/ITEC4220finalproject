@@ -1,0 +1,25 @@
+SQL> select p.generateReport(pay_t('P001', '1200', 'Nov 3, 23', (select ref(ts) from transcript_table ts where ts.transcript_id = 'T001'))) from payment_table p;
+
+P.GENERATEREPORT(PAY_T('P001','1200','NOV3,23',(SELECTREF(TS)FROMTRANSCRIPT_TABL
+--------------------------------------------------------------------------------
+                                                                               0
+                                                                              -1
+                                                                              -1
+
+SQL> select p.generateReport(pay_t('P002', '500', 'Nov 3, 23', (select ref(ts) from transcript_table ts where ts.transcript_id = 'T001'))) from payment_table p;
+
+P.GENERATEREPORT(PAY_T('P002','500','NOV3,23',(SELECTREF(TS)FROMTRANSCRIPT_TABLE
+--------------------------------------------------------------------------------
+                                                                               1
+                                                                               0
+                                                                              -1
+
+SQL> select p.generateReport(pay_t('P003', '300', 'Nov 3, 23', (select ref(ts) from transcript_table ts where ts.transcript_id = 'T001'))) from payment_table p;
+
+P.GENERATEREPORT(PAY_T('P003','300','NOV3,23',(SELECTREF(TS)FROMTRANSCRIPT_TABLE
+--------------------------------------------------------------------------------
+                                                                               1
+                                                                               1
+                                                                               0
+
+SQL> spool off

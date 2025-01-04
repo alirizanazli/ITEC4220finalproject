@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Receipt>
+  <Payment ID="P001">
+    <Transcript ID="T001">
+      <Student ID="S001">
+	<FirstName>Deniz</FirstName>
+	<LastName>Kaylu</LastName>
+      </Student>
+    </Transcript>
+  </Payment>
+  <Payment ID="P002">
+    <Transcript ID="T002">
+      <Student ID="S002">
+	<FirstName>Tom</FirstName>
+	<LastName>Mills</LastName>
+      </Student>
+    </Transcript>
+  </Payment>
+  <Payment ID="P003">
+    <Transcript ID="T003">
+      <Student ID="S003">
+	<FirstName>Daniel</FirstName>
+	<LastName>Witsell</LastName>
+      </Student>
+    </Transcript>
+  </Payment>
+</Receipt>

@@ -1,0 +1,142 @@
+select s.sname, s.slname, s.semail, s.doid.dep_name from student_table s where s.gpa < 2;
+
+SNAME                     SLNAME
+------------------------- -------------------------
+SEMAIL
+--------------------------------------------------
+DOID.DEP_NAME
+--------------------------------------------------
+Regan                     Corn
+regan.corn@yorku.ca
+Education
+
+Elly                      Mars
+elly.mars@yorku.ca
+Computer Science
+
+SNAME                     SLNAME
+------------------------- -------------------------
+SEMAIL
+--------------------------------------------------
+DOID.DEP_NAME
+--------------------------------------------------
+
+
+SQL> select s.sid, s.sname, s.slname, s.semail, s.gpa, s.doid.dep_name from graduate_table s where s.degree = 'PhD';
+
+SID  SNAME                     SLNAME
+---- ------------------------- -------------------------
+SEMAIL                                                    GPA
+-------------------------------------------------- ----------
+DOID.DEP_NAME
+--------------------------------------------------
+S012 Jackson                   Miles
+jackmile@yorku.ca                                           3
+Communication and Media
+
+S013 Megan                     Dale
+megandale@yorku.ca                                        2.5
+Space Engineering
+
+SID  SNAME                     SLNAME
+---- ------------------------- -------------------------
+SEMAIL                                                    GPA
+-------------------------------------------------- ----------
+DOID.DEP_NAME
+--------------------------------------------------
+
+S014 Richmond                  Hill
+richhill@yorku.ca                                        2.78
+Space Engineering
+
+S015 Apple                     Order
+appleorder@yorku.ca                                      3.45
+
+SID  SNAME                     SLNAME
+---- ------------------------- -------------------------
+SEMAIL                                                    GPA
+-------------------------------------------------- ----------
+DOID.DEP_NAME
+--------------------------------------------------
+Education
+
+Select cs.coid.cname, cs.foid.faculty_name from section_table cs
+Where cs.soid.sname = 'Mesut';
+  2
+COID.CNAME                FOID.FACULTY_NAME
+------------------------- --------------------------------------------------
+Advance DBMS              Liberal Arts and Prof. Study
+Intro Info Techn          Liberal Arts and Prof. Study
+
+
+
+SQL> select s.sname, s.slname, s.semail, s.doid.dep_name from student_table s where s.gpa >  2;
+
+SNAME                     SLNAME
+------------------------- -------------------------
+SEMAIL
+--------------------------------------------------
+DOID.DEP_NAME
+--------------------------------------------------
+Deniz                     Kaylu
+demiz.kaylu@yorku.ca
+Information Technology
+
+Tom                       Mills
+tom.mills@yorku.ca
+Computer Science
+
+SNAME                     SLNAME
+------------------------- -------------------------
+SEMAIL
+--------------------------------------------------
+DOID.DEP_NAME
+--------------------------------------------------
+
+Daniel                    Witsell
+daniel.witsell@yorku.ca
+Nursing
+
+Kim                       Hawk
+ki.hawk@yorku.ca
+
+SNAME                     SLNAME
+------------------------- -------------------------
+SEMAIL
+--------------------------------------------------
+DOID.DEP_NAME
+--------------------------------------------------
+Law
+
+Zey                       Tan
+zey.tan@yorku.ca
+Graduate Programs
+
+Adrian                    Joy
+
+SNAME                     SLNAME
+------------------------- -------------------------
+SEMAIL
+--------------------------------------------------
+DOID.DEP_NAME
+--------------------------------------------------
+adrian.joy@yorku.ca
+Communication and Media
+
+Mesut                     Dag
+mesut.dag@yorku.ca
+Information Technology
+
+
+SNAME                     SLNAME
+------------------------- -------------------------
+SEMAIL
+--------------------------------------------------
+DOID.DEP_NAME
+--------------------------------------------------
+Tengri                    Ay
+tengri.ay@yorku.ca
+Information Technology
+
+
+8 rows selected.

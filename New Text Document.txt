@@ -1,0 +1,1644 @@
+SQL> login as: aliriza
+SP2-0734: unknown command beginning "login as: ..." - rest of line ignored.
+aliriza@sit.itec.yorku.ca's password:
+Last login: Sun Nov  5 23:23:14 2023 from 10.80.45.87
+[aliriza@sit ~]$ sqlplus
+SP2-0734: unknown command beginning "aliriza@si..." - rest of line ignored.
+SQL> SP2-0734: unknown command beginning "Last login..." - rest of line ignored.
+SQL> SP2-0734: unknown command beginning "[aliriza@s..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL>
+SQL*Plus: Release 11.2.0.1.0 Production on Mon Nov 6 10:06:09 2023
+SP2-0734: unknown command beginning "SQL*Plus: ..." - rest of line ignored.
+SQL>
+Copyright (c) 1982, 2009, Oracle.  All rights reserved.
+SP2-0734: unknown command beginning "Copyright ..." - rest of line ignored.
+SQL>
+Enter user-name: grp7
+SP2-0734: unknown command beginning "Enter user..." - rest of line ignored.
+Enter password:
+SP2-0734: unknown command beginning "Enter pass..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL>
+Connected to:
+SP2-0734: unknown command beginning "Connected ..." - rest of line ignored.
+Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+SP2-0734: unknown command beginning "Oracle Dat..." - rest of line ignored.
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+  2
+SQL> select * owner, table_name from all_tables;
+SP2-0734: unknown command beginning "SQL> selec..." - rest of line ignored.
+select * owner, table_name from all_tables
+         *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected
+  5
+SQL>
+SQL> select owner,table_name from all_tables;
+SP2-0734: unknown command beginning "SQL> selec..." - rest of line ignored.
+SQL>
+OWNER                          TABLE_NAME
+SP2-0734: unknown command beginning "OWNER     ..." - rest of line ignored.
+------------------------------ ------------------------------
+SYS                            DUAL
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+SYS                            SYSTEM_PRIVILEGE_MAP
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+SYS                            TABLE_PRIVILEGE_MAP
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+SYS                            STMT_AUDIT_OPTION_MAP
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SYS                            WRI$_ADV_ASA_RECO_DATA
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+SYSTEM                         OL$
+SP2-0734: unknown command beginning "SYSTEM    ..." - rest of line ignored.
+SYSTEM                         OL$HINTS
+SP2-0734: unknown command beginning "SYSTEM    ..." - rest of line ignored.
+SYSTEM                         OL$NODES
+SP2-0734: unknown command beginning "SYSTEM    ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SYSTEM                         HELP
+SP2-0734: unknown command beginning "SYSTEM    ..." - rest of line ignored.
+CTXSYS                         DR$OBJECT_ATTRIBUTE
+SP2-0734: unknown command beginning "CTXSYS    ..." - rest of line ignored.
+CTXSYS                         DR$POLICY_TAB
+SP2-0734: unknown command beginning "CTXSYS    ..." - rest of line ignored.
+SQL>
+OWNER                          TABLE_NAME
+SP2-0734: unknown command beginning "OWNER     ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+------------------------------ ------------------------------
+CTXSYS                         DR$THS
+SP2-0734: unknown command beginning "CTXSYS    ..." - rest of line ignored.
+CTXSYS                         DR$THS_PHRASE
+SP2-0734: unknown command beginning "CTXSYS    ..." - rest of line ignored.
+CTXSYS                         DR$NUMBER_SEQUENCE
+SP2-0734: unknown command beginning "CTXSYS    ..." - rest of line ignored.
+MDSYS                          OGIS_SPATIAL_REFERENCE_SYSTEMS
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+MDSYS                          OGIS_GEOMETRY_COLUMNS
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+MDSYS                          SDO_UNITS_OF_MEASURE
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+MDSYS                          SDO_PRIME_MERIDIANS
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+MDSYS                          SDO_ELLIPSOIDS
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+MDSYS                          SDO_DATUMS
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+MDSYS                          SDO_COORD_SYS
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+MDSYS                          SDO_COORD_AXIS_NAMES
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+SQL>
+OWNER                          TABLE_NAME
+SP2-0734: unknown command beginning "OWNER     ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+------------------------------ ------------------------------
+MDSYS                          SDO_COORD_AXES
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+MDSYS                          SDO_COORD_REF_SYS
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+MDSYS                          SDO_COORD_OP_METHODS
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+MDSYS                          SDO_COORD_OPS
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+MDSYS                          SDO_PREFERRED_OPS_SYSTEM
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+MDSYS                          SDO_PREFERRED_OPS_USER
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+MDSYS                          SDO_COORD_OP_PATHS
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+MDSYS                          SDO_COORD_OP_PARAMS
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+MDSYS                          SDO_COORD_OP_PARAM_USE
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+MDSYS                          SDO_COORD_OP_PARAM_VALS
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+MDSYS                          SDO_XML_SCHEMAS
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+SQL>
+OWNER                          TABLE_NAME
+SP2-0734: unknown command beginning "OWNER     ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+------------------------------ ------------------------------
+OLAPSYS                        XML_LOAD_RECORDS
+SP2-0734: unknown command beginning "OLAPSYS   ..." - rest of line ignored.
+OLAPSYS                        XML_LOAD_LOG
+SP2-0734: unknown command beginning "OLAPSYS   ..." - rest of line ignored.
+OLAPSYS                        CWM2$_AW_NEXT_TEMP_CUST_MEAS
+SP2-0734: unknown command beginning "OLAPSYS   ..." - rest of line ignored.
+OLAPSYS                        CWM2$_AW_TEMP_CUST_MEAS_MAP
+SP2-0734: unknown command beginning "OLAPSYS   ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+OLAPSYS                        CWM2$_TEMP_VALUES
+SP2-0734: unknown command beginning "OLAPSYS   ..." - rest of line ignored.
+OLAPSYS                        OLAP_SESSION_DIMS
+SP2-0734: unknown command beginning "OLAPSYS   ..." - rest of line ignored.
+OLAPSYS                        OLAP_SESSION_CUBES
+SP2-0734: unknown command beginning "OLAPSYS   ..." - rest of line ignored.
+MDSYS                          SDO_GEOR_XMLSCHEMA_TABLE
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+MDSYS                          SDO_GEOR_PLUGIN_REGISTRY
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+SYS                            WRR$_REPLAY_CALL_FILTER
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+SYS                            ODCI_PMO_ROWIDS$
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+SQL>
+OWNER                          TABLE_NAME
+SP2-0734: unknown command beginning "OWNER     ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+------------------------------ ------------------------------
+SYS                            HS_BULKLOAD_VIEW_OBJ
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+SYS                            HS$_PARALLEL_METADATA
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+SYS                            HS_PARTITION_COL_NAME
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+SYS                            HS_PARTITION_COL_TYPE
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SYS                            AUDIT_ACTIONS
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+SYS                            PSTUBTBL
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+SYS                            PLAN_TABLE$
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+SYS                            KU$NOEXP_TAB
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SYS                            KU$_LIST_FILTER_TEMP
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+SYS                            KU$_LIST_FILTER_TEMP_2
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+SYS                            ODCI_SECOBJ$
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+SQL>
+OWNER                          TABLE_NAME
+SP2-0734: unknown command beginning "OWNER     ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+------------------------------ ------------------------------
+SYS                            ODCI_WARNINGS$
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+SYS                            KU$_DATAPUMP_MASTER_11_2
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+SYS                            KU$_DATAPUMP_MASTER_11_1_0_7
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+SYS                            KU$_DATAPUMP_MASTER_11_1
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SYS                            KU$_DATAPUMP_MASTER_10_1
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+SYS                            IMPDP_STATS
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+SYS                            AW$EXPRESS
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+SYS                            AW$AWMD
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SYS                            AW$AWCREATE
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+SYS                            AW$AWCREATE10G
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+SYS                            AW$AWXML
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+SQL>
+OWNER                          TABLE_NAME
+SP2-0734: unknown command beginning "OWNER     ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+------------------------------ ------------------------------
+SYS                            AW$AWREPORT
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+SYSTEM                         MVIEW$_ADV_INDEX
+SP2-0734: unknown command beginning "SYSTEM    ..." - rest of line ignored.
+SYSTEM                         MVIEW$_ADV_PARTITION
+SP2-0734: unknown command beginning "SYSTEM    ..." - rest of line ignored.
+SYSTEM                         MVIEW$_ADV_OWB
+SP2-0734: unknown command beginning "SYSTEM    ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SYS                            OLAPTABLEVELS
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+SYS                            OLAPTABLEVELTUPLES
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+XDB                            XDB$XIDX_IMP_T
+SP2-0734: unknown command beginning "XDB             ..." - rest of line ignored.
+MDSYS                          SDO_ST_TOLERANCE
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+MDSYS                          SDO_TXN_IDX_INSERTS
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+MDSYS                          SDO_TXN_IDX_DELETES
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+MDSYS                          SDO_TXN_IDX_EXP_UPD_RGN
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+SQL>
+OWNER                          TABLE_NAME
+SP2-0734: unknown command beginning "OWNER     ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+------------------------------ ------------------------------
+MDSYS                          SDO_CS_CONTEXT_INFORMATION
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+MDSYS                          SRSNAMESPACE_TABLE
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+MDSYS                          SDO_TOPO_TRANSACT_DATA
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+MDSYS                          SDO_TOPO_RELATION_DATA
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+MDSYS                          SDO_TOPO_DATA$
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+MDSYS                          SDO_CS_SRS
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+MDSYS                          NTV2_XML_DATA
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+MDSYS                          SDO_CRS_GEOGRAPHIC_PLUS_HEIGHT
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+MDSYS                          SDO_PROJECTIONS_OLD_SNAPSHOT
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+MDSYS                          SDO_ELLIPSOIDS_OLD_SNAPSHOT
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+MDSYS                          SDO_DATUMS_OLD_SNAPSHOT
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+SQL>
+OWNER                          TABLE_NAME
+SP2-0734: unknown command beginning "OWNER     ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+------------------------------ ------------------------------
+MDSYS                          SDO_GR_MOSAIC_0
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+MDSYS                          SDO_GR_MOSAIC_1
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+MDSYS                          SDO_GR_MOSAIC_2
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+MDSYS                          SDO_GR_MOSAIC_3
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+MDSYS                          SDO_GR_RDT_1
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+MDSYS                          SDO_WS_CONFERENCE
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+MDSYS                          SDO_WS_CONFERENCE_RESULTS
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+MDSYS                          SDO_WS_CONFERENCE_PARTICIPANTS
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+MDSYS                          SDO_WFS_LOCAL_TXNS
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+MDSYS                          SDO_TIN_PC_SEQ
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+MDSYS                          SDO_TIN_PC_SYSDATA_TABLE
+SP2-0734: unknown command beginning "MDSYS     ..." - rest of line ignored.
+SQL>
+OWNER                          TABLE_NAME
+SP2-0734: unknown command beginning "OWNER     ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+------------------------------ ------------------------------
+EXFSYS                         RLM$PARSEDCOND
+SP2-0734: unknown command beginning "EXFSYS    ..." - rest of line ignored.
+SYS                            SAM_SPARSITY_ADVICE
+SP2-0734: unknown command beginning "SYS             ..." - rest of line ignored.
+SQL>
+101 rows selected.
+SQL>
+SQL> desc course_section_table
+SP2-0734: unknown command beginning "SQL> desc ..." - rest of line ignored.
+ Name                                      Null?    Type
+SP2-0734: unknown command beginning "Name      ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+ ----------------------------------------- -------- ----------------------------
+ SECTION_ID                                NOT NULL CHAR(10)
+SP2-0734: unknown command beginning "SECTION_ID..." - rest of line ignored.
+ SECTION                                            CHAR(1)
+SP2-0734: unknown command beginning "SECTION   ..." - rest of line ignored.
+ CAPACITY                                           NUMBER(38)
+SP2-0734: unknown command beginning "CAPACITY  ..." - rest of line ignored.
+ LOCATION                                           VARCHAR2(50)
+SP2-0734: unknown command beginning "LOCATION  ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+ COID                                               REF OF COURSE_T
+SP2-0734: unknown command beginning "COID      ..." - rest of line ignored.
+SQL>
+SQL> dop table admin_table;
+SP2-0734: unknown command beginning "SQL> dop t..." - rest of line ignored.
+SP2-0734: unknown command beginning "dop table ..." - rest of line ignored.
+SP2-0734: unknown command beginning "SP2-0734: ..." - rest of line ignored.
+SQL> drop table admin_table;
+SP2-0734: unknown command beginning "SQL> drop ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL>
+Table dropped.
+SP2-0734: unknown command beginning "Table drop..." - rest of line ignored.
+SQL>
+SQL> drop type admin_t;
+SP2-0734: unknown command beginning "SQL> drop ..." - rest of line ignored.
+SQL>
+Type dropped.
+SP2-0734: unknown command beginning "Type dropp..." - rest of line ignored.
+SQL>
+SQL> drop table deparment_table;
+SP2-0734: unknown command beginning "SQL> drop ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL>
+Table dropped.
+SP2-0734: unknown command beginning "Table drop..." - rest of line ignored.
+SQL>
+SQL> drop type department_t ;
+SP2-0734: unknown command beginning "SQL> drop ..." - rest of line ignored.
+drop type department_t
+*
+ERROR at line 1:
+ORA-02303: cannot drop or replace a type with type or table dependents
+  5
+SQL>
+SQL> drop table student_table;
+SP2-0734: unknown command beginning "SQL> drop ..." - rest of line ignored.
+SQL>
+Table dropped.
+SP2-0734: unknown command beginning "Table drop..." - rest of line ignored.
+SQL>
+SQL>
+SP2-0042: unknown command "SQL>" - rest of line ignored.
+SQL>
+SP2-0042: unknown command "SQL>" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> select 'drop table '||table_name||' cascade constraints;' from user_tables;
+SP2-0734: unknown command beginning "SQL> selec..." - rest of line ignored.
+SQL>
+no rows selected
+SP2-0734: unknown command beginning "no rows se..." - rest of line ignored.
+SQL>
+SQL> select 'drop table '||table_name||' cascade constraints;' from user_tables;
+SP2-0734: unknown command beginning "SQL> selec..." - rest of line ignored.
+SQL>
+no rows selected
+SP2-0734: unknown command beginning "no rows se..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL>
+SQL> drop table notice_board_table;
+SP2-0734: unknown command beginning "SQL> drop ..." - rest of line ignored.
+drop table notice_board_table
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+  5
+SQL>
+SQL> drop table undergraduate_table;
+SP2-0734: unknown command beginning "SQL> drop ..." - rest of line ignored.
+SQL>
+Table dropped.
+SP2-0734: unknown command beginning "Table drop..." - rest of line ignored.
+SQL>
+SQL> drop table graduate_table;
+SP2-0734: unknown command beginning "SQL> drop ..." - rest of line ignored.
+SQL>
+Table dropped.
+SP2-0734: unknown command beginning "Table drop..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL>
+SQL> drop table course_table;
+SP2-0734: unknown command beginning "SQL> drop ..." - rest of line ignored.
+SQL>
+Table dropped.
+SP2-0734: unknown command beginning "Table drop..." - rest of line ignored.
+SQL>
+SQL> drop table course_selection_table;
+SP2-0734: unknown command beginning "SQL> drop ..." - rest of line ignored.
+drop table course_selection_table
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+  5
+SQL>
+SQL> drop table course_section_table;
+SP2-0734: unknown command beginning "SQL> drop ..." - rest of line ignored.
+SQL>
+Table dropped.
+SP2-0734: unknown command beginning "Table drop..." - rest of line ignored.
+SQL>
+SQL> drop table transcript_table;
+SP2-0734: unknown command beginning "SQL> drop ..." - rest of line ignored.
+SQL>
+Table dropped.
+SP2-0734: unknown command beginning "Table drop..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL>
+SQL> drop table faculty_table;
+SP2-0734: unknown command beginning "SQL> drop ..." - rest of line ignored.
+SQL>
+Table dropped.
+SP2-0734: unknown command beginning "Table drop..." - rest of line ignored.
+SQL>
+SQL> drop table attendance_table;
+SP2-0734: unknown command beginning "SQL> drop ..." - rest of line ignored.
+SQL>
+Table dropped.
+SP2-0734: unknown command beginning "Table drop..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL>
+SQL> drop table payment_table;
+SP2-0734: unknown command beginning "SQL> drop ..." - rest of line ignored.
+SQL>
+Table dropped.
+SP2-0734: unknown command beginning "Table drop..." - rest of line ignored.
+SQL>
+SQL> drop type student_t;
+SP2-0734: unknown command beginning "SQL> drop ..." - rest of line ignored.
+drop type student_t
+*
+ERROR at line 1:
+ORA-02303: cannot drop or replace a type with type or table dependents
+  5
+SQL>
+SQL> drop type student_t force;
+SP2-0734: unknown command beginning "SQL> drop ..." - rest of line ignored.
+SQL>
+Type dropped.
+SP2-0734: unknown command beginning "Type dropp..." - rest of line ignored.
+SQL>
+SQL> drope type admin_t;
+SP2-0734: unknown command beginning "SQL> drope..." - rest of line ignored.
+SP2-0734: unknown command beginning "drope type..." - rest of line ignored.
+SP2-0734: unknown command beginning "SP2-0734: ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> drop type admin_t;
+SP2-0734: unknown command beginning "SQL> drop ..." - rest of line ignored.
+drop type admin_t
+*
+ERROR at line 1:
+ORA-04043: object ADMIN_T does not exist
+  5
+SQL>
+SQL> drope type course_t;
+SP2-0734: unknown command beginning "SQL> drope..." - rest of line ignored.
+SP2-0734: unknown command beginning "drope type..." - rest of line ignored.
+SP2-0734: unknown command beginning "SP2-0734: ..." - rest of line ignored.
+SQL> drop type course_t;
+SP2-0734: unknown command beginning "SQL> drop ..." - rest of line ignored.
+drop type course_t
+*
+ERROR at line 1:
+ORA-02303: cannot drop or replace a type with type or table dependents
+  5
+SQL>
+SQL> drop type course_t force;
+SP2-0734: unknown command beginning "SQL> drop ..." - rest of line ignored.
+SQL>
+Type dropped.
+SP2-0734: unknown command beginning "Type dropp..." - rest of line ignored.
+SQL>
+SQL> drop type course_section;
+SP2-0734: unknown command beginning "SQL> drop ..." - rest of line ignored.
+SQL>
+Type dropped.
+SP2-0734: unknown command beginning "Type dropp..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL>
+SQL> drop type transcript_t;
+SP2-0734: unknown command beginning "SQL> drop ..." - rest of line ignored.
+SQL>
+Type dropped.
+SP2-0734: unknown command beginning "Type dropp..." - rest of line ignored.
+SQL>
+SQL> drop type course_t;
+SP2-0734: unknown command beginning "SQL> drop ..." - rest of line ignored.
+drop type course_t
+*
+ERROR at line 1:
+ORA-04043: object COURSE_T does not exist
+  5
+SQL>
+SQL> drop type undergraduate_t;
+SP2-0734: unknown command beginning "SQL> drop ..." - rest of line ignored.
+SQL>
+Type dropped.
+SP2-0734: unknown command beginning "Type dropp..." - rest of line ignored.
+SQL>
+SQL> drop type graduate_t;
+SP2-0734: unknown command beginning "SQL> drop ..." - rest of line ignored.
+SQL>
+Type dropped.
+SP2-0734: unknown command beginning "Type dropp..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL>
+SQL> drop type notice_board_t;
+SP2-0734: unknown command beginning "SQL> drop ..." - rest of line ignored.
+drop type notice_board_t
+*
+ERROR at line 1:
+ORA-04043: object NOTICE_BOARD_T does not exist
+  5  B
+SQL>
+SQL> drop type payment_t;
+SP2-0734: unknown command beginning "SQL> drop ..." - rest of line ignored.
+SQL>
+Type dropped.
+SP2-0734: unknown command beginning "Type dropp..." - rest of line ignored.
+SQL>
+SQL> drop type attendance_t;
+SP2-0734: unknown command beginning "SQL> drop ..." - rest of line ignored.
+SQL>
+Type dropped.
+SP2-0734: unknown command beginning "Type dropp..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL>
+SQL> drop type faculty_t;
+SP2-0734: unknown command beginning "SQL> drop ..." - rest of line ignored.
+SQL>
+Type dropped.
+SP2-0734: unknown command beginning "Type dropp..." - rest of line ignored.
+SQL>
+SQL> des course_t;
+SP2-0734: unknown command beginning "SQL> des c..." - rest of line ignored.
+SP2-0734: unknown command beginning "des course..." - rest of line ignored.
+SP2-0734: unknown command beginning "SP2-0734: ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> desc course_t;
+SP2-0734: unknown command beginning "SQL> desc ..." - rest of line ignored.
+ERROR:
+SP2-0042: unknown command "ERROR:" - rest of line ignored.
+ORA-04043: object course_t does not exist
+SP2-0734: unknown command beginning "ORA-04043:..." - rest of line ignored.
+SQL>
+SQL>
+SQL> spool C:\Users\Butterfly\Desktop\output.txt
+SP2-0734: unknown command beginning "SQL> spool..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> create type admin_t as object(admin_id char(4), fname varchar2(25), lname varchar2(25),
+SP2-0734: unknown command beginning "SQL> creat..." - rest of line ignored.
+  2  email varchar2(50),
+  3  member function manage_course return varchar2,
+  4  member function manage_student return varchar2,
+  5  member function manage_faculty return varchar2);
+  6  /
+SQL>
+Type created.
+SP2-0734: unknown command beginning "Type creat..." - rest of line ignored.
+SQL>
+SQL> create admin_table of admin_t(admin_id primary key);
+SP2-0734: unknown command beginning "SQL> creat..." - rest of line ignored.
+create admin_table of admin_t(admin_id primary key)
+       *
+ERROR at line 1:
+ORA-00901: invalid CREATE command
+  5
+SQL>
+SQL> create table admin_table of admin_t(admin_id primary key);
+SP2-0734: unknown command beginning "SQL> creat..." - rest of line ignored.
+SQL>
+Table created.
+SP2-0734: unknown command beginning "Table crea..." - rest of line ignored.
+SQL>
+SQL> create type body admin_t as
+SP2-0734: unknown command beginning "SQL> creat..." - rest of line ignored.
+  2  member function manage_course return varchar2 is
+  3  begin
+  4  return 'The function implemantaion is still going';
+  5  end;
+  6  end;
+  7  /
+SQL>
+Warning: Type Body created with compilation errors.
+SP2-0734: unknown command beginning "Warning: T..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL>
+SQL> show errors
+SP2-0734: unknown command beginning "SQL> show ..." - rest of line ignored.
+Errors for TYPE BODY ADMIN_T:
+SP2-0734: unknown command beginning "Errors for..." - rest of line ignored.
+SQL>
+LINE/COL ERROR
+SP2-0734: unknown command beginning "LINE/COL E..." - rest of line ignored.
+-------- -----------------------------------------------------------------
+4/17     PLS-00538: subprogram or cursor 'MANAGE_STUDENT' is declared in
+SP2-0734: unknown command beginning "4/17     P..." - rest of line ignored.
+         an object type specification and must be defined in the object
+SP2-0734: unknown command beginning "an object ..." - rest of line ignored.
+         type body
+SP2-0042: unknown command "type body" - rest of line ignored.
+SQL>
+5/17     PLS-00538: subprogram or cursor 'MANAGE_FACULTY' is declared in
+SP2-0734: unknown command beginning "5/17     P..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+         an object type specification and must be defined in the object
+SP2-0734: unknown command beginning "an object ..." - rest of line ignored.
+         type body
+SP2-0042: unknown command "type body" - rest of line ignored.
+SQL>
+SQL> create type body admin_t as
+SP2-0734: unknown command beginning "SQL> creat..." - rest of line ignored.
+  2  member function manage_student return varchar2 is
+  3  return 'The function implemantaion is still going';
+  4  end;
+  5  end;
+  6  /
+create type body admin_t as
+                 *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
+  5
+  6
+SQL> create or replace type body admin_t as member function manage_student return
+  2  varchar2
+  3  is
+  4  begin
+  5  return 'The function implemantaion is still going on';
+  6  end;
+  7  end;
+  8  /
+ 15
+Warning: Type Body created with compilation errors.
+ 17
+SQL> create or replace type body admin_t as member fundtion manage_faculty return varchar2
+  2  is
+  3  begin
+  4  return 'Implemantation of function is still under construction';
+  5  end;
+  6  end;
+  7  /
+ 25
+Warning: Type Body created with compilation errors.
+ 27
+SQL> whow errors
+SP2-0734: unknown command beginning "whow error..." - rest of line ignored.
+SQL> show errors
+Errors for TYPE BODY ADMIN_T:
+ 32
+LINE/COL ERROR
+-------- -----------------------------------------------------------------
+1/29     PLS-00103: Encountered the symbol "FUNDTION" when expecting one
+         of the following:
+         function procedure
+         The symbol "function was inserted before "FUNDTION" to continue.
+ 39
+SQL> create or replace type body admin_t as member function manage_faculty return varchar2
+  2  is
+  3  begin
+  4  return 'Implemantation of function is still under construction';
+  5  end;
+  6  end;
+  7  /
+ 47
+Warning: Type Body created with compilation errors.
+ 49
+SQL> show errors
+Errors for TYPE BODY ADMIN_T:
+ 52
+LINE/COL ERROR
+-------- -----------------------------------------------------------------
+3/17     PLS-00538: subprogram or cursor 'MANAGE_COURSE' is declared in an
+         object type specification and must be defined in the object type
+         body
+ 58
+4/17     PLS-00538: subprogram or cursor 'MANAGE_STUDENT' is declared in
+         an object type specification and must be defined in the object
+         type body
+ 62
+SQL> create or replace type body admin_t as member function manage_faculty return varchar2
+  2  is
+  3  begin
+  4  return 'Function is under construction';
+  5  end;
+  6  member function manage_student retrun varchar2
+  7  is
+  8  begin
+  9  return 'Function is under construction';
+ 10  end;
+ 11  member function manage_course return varhar2
+ 12  is
+ 13  begin
+ 14  return 'Function is under construction';
+ 15  end;
+ 16  end;
+ 17  /
+ 80
+Warning: Type Body created with compilation errors.
+ 82
+SQL> show errors
+Errors for TYPE BODY ADMIN_T:
+ 85
+LINE/COL ERROR
+-------- -----------------------------------------------------------------
+6/32     PLS-00103: Encountered the symbol "RETRUN" when expecting one of
+         the following:
+         ( return
+         The symbol "return was inserted before "RETRUN" to continue.
+ 92
+SQL> create or replace type body admin_t as member function manage_faculty return varchar2
+  2  is
+  3  begin
+  4  return 'Function is under construction';
+  5  end;
+  6  member function manage_course return varhar2
+  7  return 'Function is under construction';
+  8  end;
+  9  member function manage_student retrun varchar2
+ 10  return 'Function is under construction';
+ 11  end;
+ 12  end;
+ 13  /
+106
+Warning: Type Body created with compilation errors.
+108
+SQL> show errors
+Errors for TYPE BODY ADMIN_T:
+111
+LINE/COL ERROR
+-------- -----------------------------------------------------------------
+7/1      PLS-00103: Encountered the symbol "RETURN" when expecting one of
+         the following:
+         . @ % ; is authid as cluster order external character
+         deterministic parallel_enable pipelined aggregate
+         result_cache
+119
+SQL> insert into admin_table values (admin_t('A001','Don','Lefresne','don.lefresne@yorku.ca'));
+121
+1 row created.
+123
+SQL> insert into admin_table values (admin_t('A002','Kim','Jea','ki.jea@yorku.ca'));
+125
+1 row created.
+127
+SQL> insert into admin_table values (admin_t('A003','Fred','Axel','fred.axel@yorku.ca'));
+129
+1 row created.
+131
+SQL> create type dep_t as object(dep_id char(4), dep_name varchar2(50), adid ref admin_t);
+  2  /
+134
+Type created.
+136
+SQL> create table dep_table of dep_t(dep_id primary key);
+138
+Table created.
+140
+SQL> insert into dep_table values (dep_t('D001','Information Technology',(select ref(a) from admin_table a where a.admin_id='A001')));
+142
+1 row created.
+144
+SQL> insert into dep_table values (dep_t('D002','Computer Science',(select ref(a) from admin_table a where a.admin_id='A002')));
+146
+1 row created.
+148
+SQL> insert into dep_table values (dep_t('D003','Nursing',(select ref(a) from admin_table a where a.admin_id='A003')));
+150
+1 row created.
+152
+SQL> insert into dep_table values (dep_t('D004','Law',(select ref(a) from admin_table a where a.admin_id='A003')));
+154
+1 row created.
+156
+SQL> insert into dep_table values (dep_t('D005','Education',(select ref(a) from admin_table a where a.admin_id='A001')));
+158
+1 row created.
+160
+SQL> insert into dep_table values (dep_t('D006','Graduate Programs',(select ref(a) from admin_table a where a.admin_id='A002')));
+162
+1 row created.
+164
+SQL> insert into dep_table values (dep_t('D006','Space Engineering',(select ref(a) from admin_table a where a.admin_id='A001')));
+insert into dep_table values (dep_t('D006','Space Engineering',(select ref(a) from admin_table a where a.admin_id='A001')))
+*
+ERROR at line 1:
+ORA-00001: unique constraint (GRP7.SYS_C00257854) violated
+170
+171
+SQL> insert into dep_table values (dep_t('D007','Space Engineering',(select ref(a) from admin_table a where a.admin_id='A001')));
+173
+1 row created.
+175
+SQL> insert into dep_table values (dep_t('D008','Communication and Media',(select ref(a) from admin_table a where a.admin_id='A003')));
+177
+1 row created.
+179
+SQL> create type course_t as object(cid char(10),cname varchar2(25), credit integer, doid ref dep_t);
+  2  /
+182
+Type created.
+184
+SQL> create course_table of course_t(cid primary key);
+create course_table of course_t(cid primary key)
+       *
+ERROR at line 1:
+ORA-00901: invalid CREATE command
+190
+191
+SQL> create table course_table of course_t(cid primary key);
+193
+Table created.
+195
+SQL> insert into course_table values(course_t('ITEC1001','Intro Info Techn',3,(select ref(d) from dep_table d where d/dep_id = 'D001'));
+insert into course_table values(course_t('ITEC1001','Intro Info Techn',3,(select ref(d) from dep_table d where d/dep_id = 'D001'))
+                                                                                                                                 *
+ERROR at line 1:
+ORA-00917: missing comma
+201
+202
+SQL> insert into course_table values(course_t('ITEC1001','Intro Info Techn',3,(select ref(d) from dep_table d where d.dep_id = 'D001'));
+insert into course_table values(course_t('ITEC1001','Intro Info Techn',3,(select ref(d) from dep_table d where d.dep_id = 'D001'))
+                                                                                                                                 *
+ERROR at line 1:
+ORA-00917: missing comma
+208
+209
+SQL> insert into course_table values(course_t('ITEC1001','Intro Info Techn',3,(select ref(d) from dep_table d where d.dep_id = 'D001')));
+211
+1 row created.
+213
+SQL> insert into course_table values(course_t('ITEC4020','Advance DBMS',4,(select ref(d) from dep_table d where d.dep_id = 'D001')));
+215
+1 row created.
+217
+SQL> insert into course_table values(course_t('CS1001','Intro Computer Science',3,(select ref(d) from dep_table d where d.dep_id = 'D002')));
+219
+1 row created.
+221
+SQL> insert into course_table values(course_t('CS2020','Algorithms and Data Type',3,(select ref(d) from dep_table d where d.dep_id = 'D002')));
+223
+1 row created.
+225
+SQL> insert into course_table values(course_t('NRS1001','Intro Nursing and Human Body',3,(select ref(d) from dep_table d where d.dep_id = 'D003')));
+insert into course_table values(course_t('NRS1001','Intro Nursing and Human Body',3,(select ref(d) from dep_table d where d.dep_id = 'D003')))
+            *
+ERROR at line 1:
+ORA-22814: attribute or element value is larger than specified in type
+231
+232
+SQL> insert into course_table values(course_t('NRS1001','Intro Nursing',3,(select ref(d) from dep_table d where d.dep_id = 'D003')));
+234
+1 row created.
+236
+SQL> insert into course_table values(course_t('NRS4240','First Aid Application',4,(select ref(d) from dep_table d where d.dep_id = 'D003')));
+238
+1 row created.
+240
+SQL> insert into course_table values(course_t('ED2001','Education Fundemnetals',3,(select ref(d) from dep_table d where d.dep_id = 'D005')));
+242
+1 row created.
+244
+SQL> insert into course_table values(course_t('ED3030','Education and Technology',3,(select ref(d) from dep_table d where d.dep_id = 'D005')));
+246
+1 row created.
+248
+SQL> insert into course_table values(course_t('GP6420','Advance Economy Theories',6,(select ref(d) from dep_table d where d.dep_id = 'D006')));
+250
+1 row created.
+252
+SQL> insert into course_table values(course_t('CM3001','Social Media',4,(select ref(d) from dep_table d where d.dep_id = 'D008')));
+254
+1 row created.
+256
+SQL> insert into course_table values(course_t('CM2030','Communication',2,(select ref(d) from dep_table d where d.dep_id = 'D008')));
+258
+1 row created.
+260
+SQL> insert into course_table values(course_t('SPC3040','Space Technology',3,(select ref(d) from dep_table d where d.dep_id = 'D007')));
+262
+1 row created.
+264
+SQL> insert into course_table values(course_t('SPC4410','Space Mining',5,(select ref(d) from dep_table d where d.dep_id = 'D007')));
+266
+1 row created.
+268
+SQL> insert into course_table values(course_t('LW1001','Intro Roma Law',5,(select ref(d) from dep_table d where d.dep_id = 'D004')));
+270
+1 row created.
+272
+SQL> create type faculty_t(faculty_id char(4), faculty_name varchar2(50), faculty_email varchar2(50), doid ref dep_t);
+  2  /
+275
+Warning: Type created with compilation errors.
+277
+SQL> show errors
+Errors for TYPE FACULTY_T:
+280
+LINE/COL ERROR
+-------- -----------------------------------------------------------------
+1/15     PLS-00103: Encountered the symbol "(" when expecting one of the
+         following:
+         ; is authid as compress force compiled wrapped under
+286
+SQL> create type faculty_t as object(faculty_id char(4), faculty_name varchar2(50), faculty_email varchar2(50), doid ref dep_t);
+  2  /
+289
+Type created.
+291
+SQL> create table faculty_table of faculty_t(faculty_id primary key);
+293
+Table created.
+295
+SQL> insert into faculty_table values(faculty_t('F001', 'Liberal Arts and Prof. Study', 'lapds@yorku.ca', (select ref(d) from dep_table d where d.dep_id = 'D001'));
+insert into faculty_table values(faculty_t('F001', 'Liberal Arts and Prof. Study', 'lapds@yorku.ca', (select ref(d) from dep_table d where d.dep_id = 'D001'))
+                                                                                                                                                             *
+ERROR at line 1:
+ORA-00917: missing comma
+301
+302
+SQL> insert into faculty_table values(faculty_t('F001', 'Liberal Arts and Prof. Study', 'lapds@yorku.ca', (select ref(d) from dep_table d where d.dep_id = 'D001')));
+304
+1 row created.
+306
+SQL> insert into faculty_table values(faculty_t('F002', 'Liberal Arts and Prof. Study', 'lapds@yorku.ca', (select ref(d) from dep_table d where d.dep_id = 'D008')));
+308
+1 row created.
+310
+SQL> insert into faculty_table values(faculty_t('F003', 'Engineering', 'enginnering@yorku.ca', (select ref(d) from dep_table d where d.dep_id = 'D002')));
+312
+1 row created.
+314
+SQL> insert into faculty_table values(faculty_t('F004', 'Engineering', 'enginnering@yorku.ca', (select ref(d) from dep_table d where d.dep_id = 'D007')));
+316
+1 row created.
+318
+SQL> insert into faculty_table values(faculty_t('F005', 'Law', 'enginnering@yorku.ca', (select ref(d) from dep_table d where d.dep_id = 'D004')));
+320
+1 row created.
+322
+SQL> insert into faculty_table values(faculty_t('F006', 'Health', 'health@yorku.ca', (select ref(d) from dep_table d where d.dep_id = 'D003')));
+324
+1 row created.
+326
+SQL> insert into faculty_table values(faculty_t('F007', 'Education', 'education@yorku.ca', (select ref(d) from dep_table d where d.dep_id = 'D005')));
+328
+1 row created.
+330
+SQL> insert into faculty_table values(faculty_t('F008', 'Graduate Studies', 'graduatestudies@yorku.ca', (select ref(d) from dep_table d where d.dep_id = 'D006')));
+332
+1 row created.
+334
+SQL> desc faculty_table
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ FACULTY_ID                                NOT NULL CHAR(4)
+ FACULTY_NAME                                       VARCHAR2(50)
+ FACULTY_EMAIL                                      VARCHAR2(50)
+ DOID                                               REF OF DEP_T
+342
+SQL> create type student_t as object(sid char(4), sname varchar2(25), slname varchar2(25), semail varchar2(50), gpa float, doid ref dep_t,
+  2  member function progressReport return float,
+  3  member function registerCourse return varchar2,
+  4  member function dropCourse return varchar2)
+  5  not final;
+  6  /
+349
+Type created.
+351
+SQL> create type body student_t as
+  2  member function progressReport return floay
+  3  is
+  4  begin
+  5  return self.gpa;
+  6  end;
+  7  member function registerCourse return varchar2
+  8  is
+  9  begin
+ 10  return 'Succesfully registered';
+ 11  end;
+ 12  member function dropCourse return varchar2
+ 13  is
+ 14  begin
+ 15  return 'Course dropped';
+ 16  end;
+ 17  end;
+ 18  /
+370
+Warning: Type Body created with compilation errors.
+372
+SQL> show error
+Errors for TYPE BODY STUDENT_T:
+375
+LINE/COL ERROR
+-------- -----------------------------------------------------------------
+2/8      PL/SQL: Item ignored
+2/17     PLS-00538: subprogram or cursor 'PROGRESSREPORT' is declared in
+         an object type specification and must be defined in the object
+         type body
+382
+2/17     PLS-00539: subprogram 'PROGRESSREPORT' is declared in an object
+         type body and must be defined in the object type specification
+385
+2/39     PLS-00201: identifier 'FLOAY' must be declared
+SQL> create type body student_t as
+  2  member function progressReport return float
+  3  return self.gpa;
+  4  end;
+  5  member function registerCourse return varchar2
+  6  return 'Succesfully registered';
+  7  end;
+  8  member function dropCourse return varchar2
+  9  return 'Course dropped';
+ 10  end;
+ 11  end;
+ 12  /
+create type body student_t as
+                 *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
+403
+404
+SQL> drop type body student_t;
+406
+Type body dropped.
+408
+SQL> create type body student_t as
+  2  member function progressReport return float
+  3  return self.gpa;
+  4  end;
+  5  member function registerCourse return varchar2
+  6  return 'Succesfully registered';
+  7  end;
+  8  member function dropCourse return varchar2
+  9  return 'Course dropped';
+ 10  end;
+ 11  end;/
+ 12  /
+421
+Warning: Type Body created with compilation errors.
+423
+SQL> show error
+Errors for TYPE BODY STUDENT_T:
+426
+LINE/COL ERROR
+-------- -----------------------------------------------------------------
+3/1      PLS-00103: Encountered the symbol "RETURN" when expecting one of
+         the following:
+         . @ % ; is authid as cluster order external character
+         deterministic parallel_enable pipelined aggregate
+         result_cache
+e
+434
+SQL> drop type body_student_t;
+drop type body_student_t
+*
+ERROR at line 1:
+ORA-04043: object BODY_STUDENT_T does not exist
+440
+441
+SQL> drop type body student_t;
+443
+Type body dropped.
+445
+SQL> create table student_table of student_t(sid primary key);
+447
+Table created.
+449
+SQL> insert into student_table values (student_t('S001', 'Deniz', 'Kaylu', 'demiz.kaylu@yorku.ca', 2.75, (select ref(d) from dep_table d where d.dep_id ='D001')));
+451
+1 row created.
+453
+SQL> insert into student_table values (student_t('S002', 'Tom', 'Mills', 'tom.mills@yorku.ca', 3.18, (select ref(d) from dep_table d where d.dep_id ='D002')));
+455
+1 row created.
+457
+SQL> insert into student_table values (student_t('S003', 'Daniel', 'Witsell', 'daniel.witsell@yorku.ca', 3.88, (select ref(d) from dep_table d where d.dep_id ='D003')));
+459
+1 row created.
+461
+SQL> insert into student_table values (student_t('S004', 'Regan', 'Corn', 'regan.corn@yorku.ca', 1.65, (select ref(d) from dep_table d where d.dep_id ='D005')));
+463
+1 row created.
+465
+SQL> insert into student_table values (student_t('S005', 'Elly', 'Mars', 'elly.mars@yorku.ca', 1.49, (select ref(d) from dep_table d where d.dep_id ='D002')));
+467
+1 row created.
+469
+SQL> insert into student_table values (student_t('S006', 'Kim', 'Hawk', 'ki.hawk@yorku.ca', 2.34, (select ref(d) from dep_table d where d.dep_id ='D004')));
+471
+1 row created.
+473
+SQL> insert into student_table values (student_t('S007', 'Zey', 'Tan', 'zey.tan@yorku.ca', 3.97, (select ref(d) from dep_table d where d.dep_id ='D006')));
+475
+1 row created.
+477
+SQL> insert into student_table values (student_t('S008', 'Adrian', 'Joy', 'adrian.joy@yorku.ca', 3.18, (select ref(d) from dep_table d where d.dep_id ='D008')));
+479
+1 row created.
+481
+SQL> insert into student_table values (student_t('S009', 'Mesut', 'Dag', 'mesut.dag@yorku.ca', 2.94, (select ref(d) from dep_table d where d.dep_id ='D001')));
+483
+1 row created.
+485
+SQL> insert into student_table values (student_t('S010', 'Tengri', 'Ay', 'tengri.ay@yorku.ca', 2.17, (select ref(d) from dep_table d where d.dep_id ='D001')));
+487
+1 row created.
+489
+SQL> create type section_t as object(section_id char(5), capacity integer, location varchar2(10), coid ref course_t, foid ref faculty_t, soid ref student_t);
+  2  /
+492
+Type created.
+494
+SQL> create table section_table of section_t(section_id primary key);
+496
+Table created.
+498
+SQL> insert into section_table values (section_t('SC001',40,'DB001, (select ref(c) from course_t c where c.course_id = 'ITEC1001'),
+  2  (select ref(f) from /
+  3  /
+ERROR:
+ORA-01756: quoted string not properly terminated
+504
+505
+SQL> insert into section_table values (section_t('SC001',40,'DB001, (select ref(c) from course_table c where c.course_id = 'ITEC1001'),
+  2  (select ref(f) from faculty_table f where f.faculty_id = 'F001'),
+  3  (select ref(s) from student_table where s.sid = 'S001')));
+ERROR:
+ORA-01756: quoted string not properly terminated
+511
+512
+SQL> insert into section_table values (section_t('SC001',40,'DB001, (select ref(c) from course_table c where c.course_id = 'ITEC1001'),
+  2  (select ref(f) from faculty_table f where f.faculty_id = 'F001'),
+  3  (select ref(s) from student_table where s.sid = 'S001')));
+ERROR:
+ORA-01756: quoted string not properly terminated
+518
+519
+SQL> show errors
+No errors.
+SQL> insert into section_table values (section_t('SC001',40,'DB001', (select ref(c) from course_table c where c.course_id = 'ITEC1001'),
+  2  (select ref(f) from faculty_table f where f.faculty_id = 'F001'),
+  3  (select ref(s) from student_table where s.sid = 'S001')));
+insert into section_table values (section_t('SC001',40,'DB001', (select ref(c) from course_table c where c.course_id = 'ITEC1001'),
+                                                                                                         *
+ERROR at line 1:
+ORA-00904: "C"."COURSE_ID": invalid identifier
+529
+530
+SQL> insert into section_table values (section_t('SC001',40,'DB001', (select ref(c) from course_table c where c.cid = 'ITEC1001'),
+  2  (select ref(f) from faculty_table f where f.faculty_id = 'F001'),
+  3  (select ref(s) from student_table where s.sid = 'S001')));
+(select ref(s) from student_table whe
+                                        *
+ERROR at line 3:
+ORA-00904: "S"."SID": invalid identifier
+538
+539
+SQL> desc student_table
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SID                                       NOT NULL CHAR(4)
+ SNAME                                              VARCHAR2(25)
+ SLNAME                                             VARCHAR2(25)
+ SEMAIL                                             VARCHAR2(50)
+ GPA                                                FLOAT(126)
+ DOID                                               REF OF DEP_T
+549
+SQL> insert into section_table values (section_t('SC001',40,'DB001', (select ref(c) from course_table c where c.cid = 'ITEC1001'),
+  2  (select ref(f) from faculty_table f where f.faculty_id = 'F001'),
+  3  (select ref(s) from student_table s where s.sid = 'S001')));
+553
+1 row created.
+555
+SQL> insert into section_table values (section_t('SC002',35,'SC002', (select ref(c) from course_table c where c.cid = 'ITEC4020'),
+  2  (select ref(f) from faculty_table f where f.faculty_id = 'F002'),
+  3  (select ref(s) from student_table s where s.sid = 'S009')));
+559
+1 row created.
+561
+SQL> insert into section_table values (section_t('SC003',27,'AWE104', (select ref(c) from course_table c where c.cid = 'CS1001'),
+  2  (select ref(f) from faculty_table f where f.faculty_id = 'F003'),
+  3  (select ref(s) from student_table s where s.sid = 'S005')));
+565
+1 row created.
+567
+SQL> insert into section_table values (section_t('SC004',36,'DB201', (select ref(c) from course_table c where c.cid = 'CS1002'),
+  2  (select ref(f) from faculty_table f where f.faculty_id = 'F004'),
+  3  (select ref(s) from student_table s where s.sid = 'S005')));
+571
+1 row created.
+573
+SQL> insert into section_table values (section_t('SC005',41,'AW003', (select ref(c) from course_table c where c.cid = 'ITEC1001'),
+  2  (select ref(f) from faculty_table f where f.faculty_id = 'F001'),
+  3  (select ref(s) from student_table s where s.sid = 'S009')));
+577
+1 row created.
+579
+SQL> insert into section_table values (section_t('SC006',55,'DB001', (select ref(c) from course_table c where c.cid = 'NRS4240'),
+  2  (select ref(f) from faculty_table f where f.faculty_id = 'F006'),
+  3  (select ref(s) from student_table s where s.sid = 'S003')));
+583
+1 row created.
+585
+SQL> insert into section_table values (section_t('SC007',71,'AD004', (select ref(c) from course_table c where c.cid = 'NRS1001'),
+  2  (select ref(f) from faculty_table f where f.faculty_id = 'F006'),
+  3  (select ref(s) from student_table s where s.sid = 'S003')));
+589
+1 row created.
+591
+SQL> insert into section_table values (section_t('SC008',165,'SC401', (select ref(c) from course_table c where c.cid = 'LW1001'),
+  2  (select ref(f) from faculty_table f where f.faculty_id = 'F005'),
+  3  (select ref(s) from student_table s where s.sid = 'S004')));
+595
+1 row created.
+597
+SQL> insert into section_table values (section_t('SC009',18,'AW206', (select ref(c) from course_table c where c.cid = 'GP6420'),
+  2  (select ref(f) from faculty_table f where f.faculty_id = 'F008'),
+  3  (select ref(s) from student_table s where s.sid = 'S008')));
+601
+1 row created.
+603
+SQL> insert into section_table values (section_t('SC010',44,'AWE306', (select ref(c) from course_table c where c.cid = 'CS1001'),
+  2  (select ref(f) from faculty_table f where f.faculty_id = 'F003'),
+  3  (select ref(s) from student_table s where s.sid = 'S002')));
+607
+1 row created.
+609
+SQL> create type transcript_t as obkect(transcript_id char(4), soid ref student_t, csid ref section_t,
+  2  order member function calculateGpa (
+  3  /
+613
+Warning: Type created with compilation errors.
+615
+SQL> drop type transcript_t;
+617
+Type dropped.
+619
+SQL> create type transcript_t as obkect(transcript_id char(4), gpa float, soid ref student_t, csid ref section_t,
+  2  order member function calculateGpa (gpa in transcript_t) return float is
+  3  result float := 0;
+  4  begin
+  5  if self.gpa < 2.5 then
+  6  result ;= -1;
+  7  else
+  8  if self.gpa >2.5 then result := 1;
+  9  end if;
+ 10  end if
+ 11  return result;/
+ 12  /
+632
+Warning: Type created with compilation errors.
+634
+SQL> drop type transcript_t;
+636
+Type dropped.
+638
+SQL> create type transcript_t as obkect(transcript_id char(4), gpa float, soid ref student_t, csid ref section_t,
+  2  order member function calculateGpa (gpa in transcript_t) return float);
+  3  /
+642
+Warning: Type created with compilation errors.
+644
+SQL> show errors
+Errors for TYPE TRANSCRIPT_T:
+647
+LINE/COL ERROR
+-------- -----------------------------------------------------------------
+1/22     PLS-00103: Encountered the symbol "OBKECT" when expecting one of
+         the following:
+         array varray table object fixed varying opaque sparse
+         The symbol "object was inserted before "OBKECT" to continue.
+654
+SQL> create type transcript_t as object(transcript_id char(4), gpa float, soid ref student_t, csid ref section_t,
+  2  order member function calculateGpa (gpa in transcript_t) return float);
+  3  /
+658
+Type created.
+660
+SQL> create type body transcipt_t as
+  2  order member function calculateGpa(gpa in transcript_t) return float is
+  3  result :=0;
+  4  begin
+  5  if self.gpa <2
+  6  then
+  7  result :=-1;
+  8  else
+  9  if self.gpa >2 then result :=1;
+ 10  end if;
+ 11  end if;
+ 12  return result;
+ 13  end;
+ 14  end;
+ 15  /
+676
+Warning: Type Body created with compilation errors.
+678
+SQL> show errors
+Errors for TYPE BODY TRANSCIPT_T:
+681
+LINE/COL ERROR
+-------- -----------------------------------------------------------------
+3/8      PLS-00103: Encountered the symbol "=" when expecting one of the
+         following:
+         constant exception <an identifier>
+         <a double-quoted delimited-identifier> table long double ref
+         char time timestamp interval date binary national character
+         nchar
+         The symbol "<an identifier>" was substituted for "=" to continue.
+691
+692
+SQL> order member function calculateGpa(gpa in transcript_t) return float is
+SP2-0734: unknown command beginning "order memb..." - rest of line ignored.
+SQL> create type body transcipt_t as
+  2  order member function calculateGpa(gpa in transcript_t) return float is
+  3  result := 0;
+  4  begin
+  5  if self.gpa < 2 then
+  6  result := -1;
+  7  else
+  8  if self.gpa > 2 then result := 1;
+  9  end if;
+ 10  end if;
+ 11  return result;
+ 12  end;
+ 13  end;
+ 14  /
+create type body transcipt_t as
+                 *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
+/713
+714
+SQL> drop type body transcript_t;
+drop type body transcript_t
+*
+ERROR at line 1:
+ORA-04043: object TRANSCRIPT_T does not exist
+720
+721
+SQL> drop body type transcript_t;
+drop body type transcript_t
+     *
+ERROR at line 1:
+ORA-00950: invalid DROP option
+727
+728
+SQL> dop type body transcript_t;
+SP2-0734: unknown command beginning "dop type b..." - rest of line ignored.
+SQL> ddop type body transcript_t;
+SP2-0734: unknown command beginning "ddop type ..." - rest of line ignored.
+SQL> drop type body transcript_t;
+drop type body transcript_t
+*
+ERROR at line 1:
+ORA-04043: object TRANSCRIPT_T does not exist
+738
+739
+SQL> desc transcript_t
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ TRANSCRIPT_ID                                      CHAR(4)
+ GPA                                                FLOAT(126)
+ SOID                                               REF OF STUDENT_T
+ CSID                                               REF OF SECTION_T
+747
+METHOD
+------
+ ORDER MEMBER FUNCTION CALCULATEGPA RETURNS NUMBER
+ Argument Name                  Type                    In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GPA                            TRANSCRIPT_T            IN
+754
+SQL> insert into transcript_table values(transcript_t('T001',2.75,
+  2  (select ref(s) from student_table s where s.sid='S001'),
+  3  (select ref(cs) from section_table cs where cs.section_id = 'SC001')));
+insert into transcript_table values(transcript_t('T001',2.75,
+            *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+762
+763
+SQL> desc transcript_table;
+ERROR:
+ORA-04043: object transcript_table does not exist
+767
+768
+SQL> create table transcript_table of transcript_t (transcript_id primary key);
+770
+Table created.
+772
+SQL> insert into transcript_table values(transcript_t('T001',2.75,
+  2  (select ref(s) from student_table s where s.sid='S001'),
+  3  (select ref(cs) from section_table cs where cs.section_id = 'SC001')));
+776
+1 row created.
+778
+SQL> insert into transcript_table values(transcript_t('T002',3.18,
+  2  (select ref(s) from student_table s where s.sid='S002'),
+  3  (select ref(cs) from section_table cs where cs.section_id = 'SC010')));
+782
+1 row created.
+784
+SQL> insert into transcript_table values(transcript_t('T003',3.88,
+  2  (select ref(s) from student_table s where s.sid='S003'),
+  3  (select ref(cs) from section_table cs where cs.section_id = 'SC007')));
+788
+1 row created.
+790
+SQL> insert into transcript_table values(transcript_t('T004',3.18,
+  2  (select ref(s) from student_table s where s.sid='S008'),
+  3  (select ref(cs) from section_table cs where cs.section_id = 'SC009')));
+794
+1 row created.
+796
+SQL> insert into transcript_table values(transcript_t('T005',2.94,
+  2  (select ref(s) from student_table s where s.sid='S009'),
+  3  (select ref(cs) from section_table cs where cs.section_id = 'SC005')));
+800
+1 row created.
+802
+SQL> create type attn_t as object(attn_id char(5), sturecord varchar2(10), schedule varchar2(25), soid ref student_t, cs ref section_t,
+  2  member function trackingRecord return varchar2,
+  3  member function generateRecord return varchar2);
+  4  /
+807
+Type created.
+809
+SQL> create type body attn_t as
+  2  member function trackingRecord return varchar2
+  3  is
+  4  begin
+  5  return 'Record of students for attendance';
+  6  end;
+  7  member function generateReport return varhcar2
+  8  is
+  9  begin
+ 10  return self.sturecord;
+ 11  emd;
+ 12  /
+
+Warning: Type Body created with compilation errors.
+823  824
+SQL> drop type body attn_t;
+826
+Type body dropped.
+
+SQL> SQL> create type body attn_t as
+SP2-0734: unknown command beginning "SQL> creat..." - rest of line ignored.
+  2  member function trackingRecord return varchar2
+  3  is
+  4  begin
+  5  return 'Record of students for attendance';
+  6  end;
+  7  member function generateReport return varhcar2
+  8  is
+  9  begin
+SQL> SQL> SQL> SQL> SQL> SQL> SQL> SQL>  10  return self.sturecord;
+SQL> end;
+SP2-0042: unknown command "end" - rest of line ignored.
+SQL> end;
+SP2-0042: unknown command "end" - rest of line ignored.
+SQL> /
+ member function trackingRecord return varchar2
+ *
+ERROR at line 2:
+ORA-00933: SQL command not properly ended
+842  843  844  845  846  847  848  849
+
+SQL> create type body attn_t as
+  2  member function trackingRecord return varchar2
+  3  is
+  4  begin
+  5  return 'Record of students for attendance';
+  6  end;
+  7  member function generateReport return varhcar2
+  8  is
+  9  begin
+ 10  return self.sturecord;
+ 11  end;
+ 12  end;
+ 13  /
+851  852  853  854  855  856  857  858  859  860  861  862  863  864
+Warning: Type Body created with compilation errors.
+
+SQL> show errors
+Errors for TYPE BODY ATTN_T:
+
+LINE/COL ERROR
+-------- -----------------------------------------------------------------
+3/17     PLS-00538: subprogram or cursor 'GENERATERECORD' is declared in
+         an object type specification and must be defined in the object
+         type body
+
+7/8      PL/SQL: Item ignored
+7/17     PLS-00539: subprogram 'GENERATEREPORT' is declared in an object
+         type body and must be defined in the object type specification
+
+7/39     PLS-00201: identifier 'VARHCAR2' must be declared
+SQL> create type payment as object(payment_id char(4), amount integer, date varchar2(50), tsid ref transcript_t,
+  2  member function processPayment return varchar2,
+  3  member function generateReport return varchar2) not final;
+  4  /
+
+Warning: Type created with compilation errors.
+
+SQL> show error
+Errors for TYPE PAYMENT:
+
+LINE/COL ERROR
+-------- -----------------------------------------------------------------
+0/0      PL/SQL: Compilation unit analysis terminated
+1/60     PLS-00330: invalid use of type name or subtype name
+SQL> create type payment as object(payment_id char(4), amount integer, date varchar2(50), tsid ref transcript_t);
+  2  /
+
+Warning: Type created with compilation errors.
+
+SQL> show error
+Errors for TYPE PAYMENT:
+
+LINE/COL ERROR
+-------- -----------------------------------------------------------------
+0/0      PL/SQL: Compilation unit analysis terminated
+1/60     PLS-00330: invalid use of type name or subtype name
+SQL> create type payment_t  as object(payment_id char(4), amount integer, date varchar2(50), tsid ref transcript_t)not final ;
+  2  /
+
+Warning: Type created with compilation errors.
+
+SQL> show errors
+Errors for TYPE PAYMENT_T:
+
+LINE/COL ERROR
+-------- -----------------------------------------------------------------
+0/0      PL/SQL: Compilation unit analysis terminated
+1/63     PLS-00330: invalid use of type name or subtype name
+SQL> drop type payment_t;
+
+SQL> desc payment_t;
+ERROR:
+ORA-24372: invalid object for describe
+921  922  923  924
+
+SQL> create type pay_t as object(pay_id char(4), amount float, pay_date varchar2(50), ts ref transcript_t);
+  2  /
+
+Type created.
+929  930
+SQL> create table payment_table of pay_t;
+
+Table created.
+
+SQL> insert into payment_table values( pay_t('P001',300, '2023-08-21',
+  2  (select ref(ts) from transcript_table ts where ts.transcript_id = 'T001')));
+
+1 row created.
+938  939
+SQL> insert into payment_table values( pay_t('P002',500, '2022-08-21',
+  2  (select ref(ts) from transcript_table ts where ts.transcript_id = 'T002')));
+
+1 row created.
+
+SQL> insert into payment_table values( pay_t('P003',1200, '2023-09-29',
+  2  (select ref(ts) from transcript_table ts where ts.transcript_id = 'T003')));
+
+1 row created.
+948  949
+SQL> insert into payment_table values( pay_t('P004',2400, '2023-09-27',
+  2  (select ref(ts) from transcript_table ts where ts.transcript_id = 'T004')));
+
+1 row created.
+953  954
+SQL> spool off
+955  956

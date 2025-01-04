@@ -1,0 +1,178 @@
+
+SQL> select cs.soid.sname, from section_table cs having count(cs.soid)>1 order by cs.soid.sname;
+select cs.soid.sname, from section_table cs having count(cs.soid)>1 order by cs.soid.sname
+                      *
+ERROR at line 1:
+ORA-00936: missing expression
+
+
+SQL> select cs.soid.sname from section_table cs having count(cs.soid)>1 order by cs.soid.sname;
+select cs.soid.sname from section_table cs having count(cs.soid)>1 order by cs.soid.sname
+       *
+ERROR at line 1:
+ORA-00937: not a single-group group function
+
+
+SQL> select cs.soid.sname, cs.coid.cname from section_table cs;
+
+SOID.SNAME                COID.CNAME
+------------------------- -------------------------
+Deniz                     Intro Info Techn
+Mesut                     Advance DBMS
+Elly                      Intro Computer Science
+Elly
+Mesut                     Intro Info Techn
+Daniel                    First Aid Application
+Daniel                    Intro Nursing
+Regan                     Intro Roma Law
+Adrian                    Advance Economy Theories
+Tom                       Intro Computer Science
+
+10 rows selected.
+
+SQL> select cs.soid.sname, cs.soid.slname, cs.soid.gpa, cs.coid.cname from section_table cs where cs.location = 'DB001';
+
+SOID.SNAME                SOID.SLNAME                 SOID.GPA
+------------------------- ------------------------- ----------
+COID.CNAME
+-------------------------
+Deniz                     Kaylu                           2.75
+Intro Info Techn
+
+Daniel                    Witsell                         3.88
+First Aid Application
+
+
+SQL> select cs.coid.cname, cs.foid.faculty_name from section_table where cs.soid.sname ='Daniel' and cs.soid.slname = 'Witsell';
+select cs.coid.cname, cs.foid.faculty_name from section_table where cs.soid.sname ='Daniel' and cs.soid.slname = 'Witsell'
+                                                                                                *
+ERROR at line 1:
+ORA-00904: "CS"."SOID"."SLNAME": invalid identifier
+
+
+SQL> desc student_Table
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SID                                       NOT NULL CHAR(4)
+ SNAME                                              VARCHAR2(25)
+ SLNAME                                             VARCHAR2(25)
+ SEMAIL                                             VARCHAR2(50)
+ GPA                                                FLOAT(126)
+ DOID                                               REF OF DEP_T
+
+SQL> select cs.coid.cname, cs.foid.faculty_name from section_table where cs.soid.sname ='Daniel';
+select cs.coid.cname, cs.foid.faculty_name from section_table where cs.soid.sname ='Daniel'
+                                                                    *
+ERROR at line 1:
+ORA-00904: "CS"."SOID"."SNAME": invalid identifier
+
+
+SQL> select cs.coid.cname, cs.foid.faculty_name from section_table
+  2  where cs.soid.sname ='Daniel';
+where cs.soid.sname ='Daniel'
+      *
+ERROR at line 2:
+ORA-00904: "CS"."SOID"."SNAME": invalid identifier
+
+
+SQL> where cs.soid='S003;';
+SP2-0734: unknown command beginning "where cs.s..." - rest of line ignored.
+SQL> select cs.coid.cname, cs.foid.faculty_name from section_table
+  2  where cs.soid='S003;';
+where cs.soid='S003;'
+      *
+ERROR at line 2:
+ORA-00904: "CS"."SOID": invalid identifier
+
+
+SQL> select cs.coid.cname, cs.foid.faculty_name from section_table;
+select cs.coid.cname, cs.foid.faculty_name from section_table
+                      *
+ERROR at line 1:
+ORA-00904: "CS"."FOID"."FACULTY_NAME": invalid identifier
+
+
+SQL> select cs.coid.cname, cs.foid.faculty_name from section_table cs
+  2  where cs.soid.sname ='Daniel';
+
+COID.CNAME                FOID.FACULTY_NAME
+------------------------- --------------------------------------------------
+First Aid Application     Health
+Intro Nursing             Health
+
+SQL> slect d.dep_id, d.dep_name fro dep_table d join course_table c on c.doid=d.dep_id;
+SP2-0734: unknown command beginning "slect d.de..." - rest of line ignored.
+SQL> select d.dep_id, d.dep_name fro dep_table d join course_table c on c.doid=d.dep_id;
+select d.dep_id, d.dep_name fro dep_table d join course_table c on c.doid=d.dep_id
+                                *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected
+
+
+SQL> select d.dep_id, d.dep_name from dep_table d join course_table c on c.doid=d.dep_id;
+select d.dep_id, d.dep_name from dep_table d join course_table c on c.doid=d.dep_id
+                                                                           *
+ERROR at line 1:
+ORA-00932: inconsistent datatypes: expected REF got CHAR
+
+
+SQL> select d.dep_id, d.dep_name from dep_table d weher d.adid ='A001';
+select d.dep_id, d.dep_name from dep_table d weher d.adid ='A001'
+                                             *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended
+
+
+SQL> select d.dep_id, d.dep_name from dep_table d wehere d.adid ='A001';
+select d.dep_id, d.dep_name from dep_table d wehere d.adid ='A001'
+                                             *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended
+
+
+SQL> select d.dep_id, d.dep_name from dep_table d where d.adid ='A001';
+select d.dep_id, d.dep_name from dep_table d where d.adid ='A001'
+                                                           *
+ERROR at line 1:
+ORA-00932: inconsistent datatypes: expected REF got CHAR
+
+
+SQL> select d.dep_id, d.dep_name from dep_table d where d.adid = 'A001';
+select d.dep_id, d.dep_name from dep_table d where d.adid = 'A001'
+                                                            *
+ERROR at line 1:
+ORA-00932: inconsistent datatypes: expected REF got CHAR
+
+
+SQL> select d.dep_id, d.dep_name from dep_table d join course_table c on c.doid.dep_id=d.dep_id;
+
+DEP_ DEP_NAME
+---- --------------------------------------------------
+D001 Information Technology
+D001 Information Technology
+D002 Computer Science
+D002 Computer Science
+D003 Nursing
+D003 Nursing
+D004 Law
+D005 Education
+D005 Education
+D006 Graduate Programs
+D007 Space Engineering
+
+DEP_ DEP_NAME
+---- --------------------------------------------------
+D007 Space Engineering
+D008 Communication and Media
+D008 Communication and Media
+
+14 rows selected.
+
+SQL> select d.dep_id, d.dep_name from dep_table d, (select  c.cname from course_table c) join course_table c on c.doid.dep_id=d.dep_id;
+select d.dep_id, d.dep_name from dep_table d, (select  c.cname from course_table c) join course_table c on c.doid.dep_id=d.dep_id
+                                                                                                                         *
+ERROR at line 1:
+ORA-00904: "D"."DEP_ID": invalid identifier
+
+
+SQL> spool off

@@ -1,0 +1,673 @@
+Last login: Thu Nov 30 14:40:03 on ttys000
+(base) λ ~/ ssh sit.itec.yorku.ca
+osmank47@sit.itec.yorku.ca's password: 
+Last login: Thu Nov 30 14:40:18 2023 from 10.80.51.33
+[osmank47@sit ~]$ sqlplus
+
+SQL*Plus: Release 11.2.0.1.0 Production on Thu Nov 30 14:47:04 2023
+
+Copyright (c) 1982, 2009, Oracle.  All rights reserved.
+
+Enter user-name: grp7
+Enter password: 
+
+Connected to:
+Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+SQL> set pagesize 60
+SQL> set long 32000
+SQL> xquery
+  2  let $s :=doc ('public/mil3/student.xml')
+  3  return $s
+  4  /
+
+No items selected.
+
+SQL> xquery
+SP2-0042: unknown command "query" - rest of line ignored.
+SQL> xquery
+  2  let $s :=doc ('/public/mil3/student.xml')
+  3  return $s
+  4  /
+
+Result Sequence
+--------------------------------------------------------------------------------
+<?xml version="1.0"?>
+<Student>
+  <StudentID ID="S001">
+    <Sname>Deniz</Sname>
+    <Surname>Kaylu</Surname>
+    <Email>demiz.kaylu@yorku.ca</Email>
+    <GPA>2.75</GPA>
+  </StudentID>
+  <StudentID ID="S002">
+    <Sname>Tom</Sname>
+    <Surname>Mills</Surname>
+    <Email>tom.mills@yorku.ca</Email>
+    <GPA>3.18</GPA>
+  </StudentID>
+  <StudentID ID="S003">
+    <Sname>Daniel</Sname>
+    <Surname>Witsell</Surname>
+    <Email>daniel.witsell@yorku.ca</Email>
+    <GPA>3.88</GPA>
+  </StudentID>
+  <StudentID ID="S004">
+    <Sname>Regan</Sname>
+    <Surname>Corn</Surname>
+    <Email>regan.corn@yorku.ca</Email>
+    <GPA>1.65</GPA>
+  </StudentID>
+  <StudentID ID="S005">
+    <Sname>Elly</Sname>
+    <Surname>Mars</Surname>
+    <Email>elly.mars@yorku.ca</Email>
+    <GPA>1.49</GPA>
+  </StudentID>
+  <StudentID ID="S006">
+    <Sname>Kim</Sname>
+    <Surname>Hawk</Surname>
+    <Email>ki.hawk@yorku.ca</Email>
+    <GPA>2.34</GPA>
+  </StudentID>
+  <StudentID ID="S007">
+    <Sname>Zey</Sname>
+    <Surname>Tan</Surname>
+    <Email>zey.tan@yorku.ca</Email>
+    <GPA>3.97</GPA>
+  </StudentID>
+  <StudentID ID="S008">
+    <Sname>Adrian</Sname>
+    <Surname>Joy</Surname>
+    <Email>adrian.joy@yorku.ca</Email>
+    <GPA>3.18</GPA>
+  </StudentID>
+  <StudentID ID="S009">
+    <Sname>Mesut</Sname>
+    <Surname>Dag</Surname>
+    <Email>mesut.dag@yorku.ca</Email>
+    <GPA>2.94</GPA>
+  </StudentID>
+  <StudentID ID="S010">
+
+Result Sequence
+--------------------------------------------------------------------------------
+    <Sname>Tengri</Sname>
+    <Surname>Ay</Surname>
+    <Email>tengri.ay@yorku.ca</Email>
+    <GPA>2.17</GPA>
+  </StudentID>
+</Student>
+
+
+xquery
+  let $s := doc('/public/mil3/student.xml')
+  return $s//StudentID[GPA > 2.5]/(Sname, Email)
+  2    3    4  
+  5  /
+
+Result Sequence
+--------------------------------------------------------------------------------
+<Sname>Deniz</Sname>
+<Email>demiz.kaylu@yorku.ca</Email>
+<Sname>Tom</Sname>
+<Email>tom.mills@yorku.ca</Email>
+<Sname>Daniel</Sname>
+<Email>daniel.witsell@yorku.ca</Email>
+<Sname>Zey</Sname>
+<Email>zey.tan@yorku.ca</Email>
+<Sname>Adrian</Sname>
+<Email>adrian.joy@yorku.ca</Email>
+<Sname>Mesut</Sname>
+<Email>mesut.dag@yorku.ca</Email>
+
+12 item(s) selected.
+
+xquery
+  let $s := doc('/public/mil3/student.xml')
+  return $s//StudentID[GPA < 2]/(@ID, Email)
+  2    3    4  
+  5  /
+
+Result Sequence
+--------------------------------------------------------------------------------
+S004
+<Email>regan.corn@yorku.ca</Email>
+S005
+<Email>elly.mars@yorku.ca</Email>
+
+xquery
+  let $s := doc('/public/mil3/student.xml')
+  return $s//StudentID[@ID=('S005', 'S006', 'S007')]/(Sname, Surname, Email)
+  2    3    4  
+  5  /
+
+Result Sequence
+--------------------------------------------------------------------------------
+<Sname>Elly</Sname>
+<Surname>Mars</Surname>
+<Email>elly.mars@yorku.ca</Email>
+<Sname>Kim</Sname>
+<Surname>Hawk</Surname>
+<Email>ki.hawk@yorku.ca</Email>
+<Sname>Zey</Sname>
+<Surname>Tan</Surname>
+<Email>zey.tan@yorku.ca</Email>
+
+9 item(s) selected.
+
+
+
+
+SQL> xquery
+for $s in doc('/public/mil3/student.xml')/Student/StudentID
+where $s/GPA > 2.5
+return
+  <Student>
+    <Sname>{$s/Sname/text()}</Sname>
+    <Surname>{$s/Surname/text()}</Surname>
+    <Email>{$s/Email/text()}</Email>
+  9    </Student>
+ 10  /
+
+Result Sequence
+--------------------------------------------------------------------------------
+<Student><Sname>Deniz</Sname><Surname>Kaylu</Surname><Email>demiz.kaylu@yorku.ca
+</Email></Student>
+
+<Student><Sname>Tom</Sname><Surname>Mills</Surname><Email>tom.mills@yorku.ca</Em
+ail></Student>
+
+<Student><Sname>Daniel</Sname><Surname>Witsell</Surname><Email>daniel.witsell@yo
+rku.ca</Email></Student>
+
+<Student><Sname>Zey</Sname><Surname>Tan</Surname><Email>zey.tan@yorku.ca</Email>
+</Student>
+
+<Student><Sname>Adrian</Sname><Surname>Joy</Surname><Email>adrian.joy@yorku.ca</
+Email></Student>
+
+<Student><Sname>Mesut</Sname><Surname>Dag</Surname><Email>mesut.dag@yorku.ca</Em
+ail></Student>
+
+
+6 item(s) selected.
+
+SQL> xquery
+for $student in doc('/public/mil3/student.xml')/Student/StudentID
+where $student/@ID = 'S005' or $student/@ID = 'S006' or $student/@ID = 'S007'
+return
+  <Student>
+    <Sname>{$student/Sname/text()}</Sname>
+    <Surname>{$student/Surname/text()}</Surname>
+    <Email>{$student/Email/text()}</Email>
+  3    4    5    6    7    8    9    </Student>
+ 10  /
+
+Result Sequence
+--------------------------------------------------------------------------------
+<Student><Sname>Elly</Sname><Surname>Mars</Surname><Email>elly.mars@yorku.ca</Em
+ail></Student>
+
+<Student><Sname>Kim</Sname><Surname>Hawk</Surname><Email>ki.hawk@yorku.ca</Email
+></Student>
+
+<Student><Sname>Zey</Sname><Surname>Tan</Surname><Email>zey.tan@yorku.ca</Email>
+</Student>
+
+
+SQL> xquery
+for $student in doc('/public/mil3/student.xml')/Student/StudentID
+where xs:double($student/GPA) < 2.0
+return
+  <Student>
+    <StudentID>{$student/@ID}</StudentID>
+    <Email>{$student/Email/text()}</Email>
+  </Student>
+  3    4    5    6    7    8    9  /
+
+Result Sequence
+--------------------------------------------------------------------------------
+<Student><StudentID ID="S004"></StudentID><Email>regan.corn@yorku.ca</Email></St
+udent>
+
+<Student><StudentID ID="S005"></StudentID><Email>elly.mars@yorku.ca</Email></Stu
+dent>
+
+
+SQL> xquery
+for $student in doc('/public/mil3/student.xml')/Student/StudentID
+where $student/Sname = "Deniz" and $student/GPA > 2.5
+return
+  <Student>
+    <StudentID>{$student/@ID}</StudentID>
+    <Sname>{$student/Sname/text()}</Sname>
+    <Email>{$student/Email/text()}</Email>
+  </Student>
+  3    4    5    6    7    8    9   10  /
+
+Result Sequence
+--------------------------------------------------------------------------------
+<Student><StudentID ID="S001"></StudentID><Sname>Deniz</Sname><Email>demiz.kaylu
+@yorku.ca</Email></Student>
+
+
+xquery
+  2  let $b :=doc('/public/mil3/query9.xml')
+  3  return $b
+  2    3    4    4  /
+  5  /
+ERROR:
+ORA-19114: XPST0003 - error during parsing the XQuery expression:
+LPX-00801: XQuery syntax error at 'let'
+1   2  let $b :=doc('/public/mil3/query9.xml')
+-     ^
+
+
+SQL> xquery
+  2  let $b:=doc('/public/mil3/query9.xml')
+  3  return $b
+  4  /
+
+Result Sequence
+--------------------------------------------------------------------------------
+<?xml version="1.0"?>
+<Receipt>
+  <Payment ID="P001">
+    <Transcript ID="T001">
+      <Student ID="S001">
+	<FirstName>Deniz</FirstName>
+	<LastName>Kaylu</LastName>
+      </Student>
+    </Transcript>
+  </Payment>
+  <Payment ID="P002">
+    <Transcript ID="T002">
+      <Student ID="S002">
+	<FirstName>Tom</FirstName>
+	<LastName>Mills</LastName>
+      </Student>
+    </Transcript>
+  </Payment>
+  <Payment ID="P003">
+    <Transcript ID="T003">
+      <Student ID="S003">
+	<FirstName>Daniel</FirstName>
+	<LastName>Witsell</LastName>
+      </Student>
+    </Transcript>
+  </Payment>
+</Receipt>
+
+
+SQL> xquery
+xquery
+  for $payment in doc('/public/mil3/query9.xml')//Payment
+  where $payment/Transcript/Student[@ID = 'S001']/FirstName
+  return $payment/@ID
+  3    4    5    6  /
+ERROR:
+ORA-19114: XPST0003 - error during parsing the XQuery expression:
+LPX-00801: XQuery syntax error at 'for'
+2     for $payment in doc('/public/mil3/query9.xml')//Payment
+-     ^
+
+
+SQL> xquery
+xquery
+  for $payment in doc('/public/mil3/query9.xml')//Payment
+  where $payment/Transcript/Student[@ID = 'S001']/FirstName
+  return $payment/@ID
+  3    4    5    6  /
+ERROR:
+ORA-19114: XPST0003 - error during parsing the XQuery expression:
+LPX-00801: XQuery syntax error at 'for'
+2     for $payment in doc('/public/mil3/query9.xml')//Payment
+-     ^
+
+
+SQL> xquery
+  2  let $f :=doc('/public/mil3/faculty.xml')
+  3  return $f
+  4  /
+
+Result Sequence
+--------------------------------------------------------------------------------
+<?xml version="1.0"?>
+<Faculty>
+  <FacultyID FID="F001">
+    <FNAME>Liberal Arts and Prof. Study</FNAME>
+    <FEmail>lapds@yorku.ca</FEmail>
+  </FacultyID>
+  <FacultyID FID="F002">
+    <FNAME>Liberal Arts and Prof. Study</FNAME>
+    <FEmail>lapds@yorku.ca</FEmail>
+  </FacultyID>
+  <FacultyID FID="F003">
+    <FNAME>Engineering</FNAME>
+    <FEmail>enginnering@yorku.ca</FEmail>
+  </FacultyID>
+  <FacultyID FID="F004">
+    <FNAME>Engineering</FNAME>
+    <FEmail>enginnering@yorku.ca</FEmail>
+  </FacultyID>
+  <FacultyID FID="F005">
+    <FNAME>Law</FNAME>
+    <FEmail>enginnering@yorku.ca</FEmail>
+  </FacultyID>
+  <FacultyID FID="F006">
+    <FNAME>Health</FNAME>
+    <FEmail>health@yorku.ca</FEmail>
+  </FacultyID>
+  <FacultyID FID="F007">
+    <FNAME>Education</FNAME>
+    <FEmail>education@yorku.ca</FEmail>
+  </FacultyID>
+  <FacultyID FID="F008">
+    <FNAME>Graduate Studies</FNAME>
+    <FEmail>graduatestudies@yorku.ca</FEmail>
+  </FacultyID>
+</Faculty>
+
+
+SQL> xquery
+xquery
+  for $faculty in doc('/public/mil3/faculty.xml')//FacultyID
+  where $faculty/FNAME = 'Engineering'
+  return $faculty/@FID, $faculty/FNAME
+  3    4    5    6  /
+ERROR:
+ORA-19114: XPST0003 - error during parsing the XQuery expression:
+LPX-00801: XQuery syntax error at 'for'
+2     for $faculty in doc('/public/mil3/faculty.xml')//FacultyID
+-     ^
+
+
+SQL> xquery
+  2  for $f :=doc('/public/mil3/faculty.xml')//FacultyID
+  3  where $f/FNAME = 'Engineering'
+  4  return $f/@FID, $f/FNAME
+  5  /
+ERROR:
+ORA-19114: XPST0003 - error during parsing the XQuery expression:
+LPX-00801: XQuery syntax error at ':='
+1   for $f :=doc('/public/mil3/faculty.xml')//FacultyID
+-	  ^
+
+
+SQL> xquery
+xquery
+  for $f in doc('/public/mil3/faculty.xml')//FacultyID[FNAME = 'Engineering']
+  return ($f/@FID, $f/FNAME)
+  3    4    5  
+  6  /
+ERROR:
+ORA-19114: XPST0003 - error during parsing the XQuery expression:
+LPX-00801: XQuery syntax error at 'for'
+2     for $f in doc('/public/mil3/faculty.xml')//FacultyID[FNAME = 'Engineering
+-     ^
+
+
+SQL> xquery
+xquery
+  for $f in doc('/public/mil3/faculty.xml')//FacultyID[FNAME = 'Engineering']
+  return ($f/@FID, $f/FNAME)
+  3    4    5  /
+ERROR:
+ORA-19114: XPST0003 - error during parsing the XQuery expression:
+LPX-00801: XQuery syntax error at 'for'
+2     for $f in doc('/public/mil3/faculty.xml')//FacultyID[FNAME = 'Engineering
+-     ^
+
+
+SQL> xquery
+for $faculty in doc('/public/mil3/faculty.xml')//FacultyID
+  where $faculty/FNAME = 'Engineering'
+  return
+    <Faculty>
+      <FacultyID>{$faculty/@FID}</FacultyID>
+      <FNAME>{$faculty/FNAME/text()}</FNAME>
+  3    4    5    6    7    8      </Faculty>
+  9  /
+
+Result Sequence
+--------------------------------------------------------------------------------
+<Faculty><FacultyID FID="F003"></FacultyID><FNAME>Engineering</FNAME></Faculty>
+<Faculty><FacultyID FID="F004"></FacultyID><FNAME>Engineering</FNAME></Faculty>
+
+SQL> xquery
+for $faculty in doc('/public/mil3/faculty.xml')//FacultyID
+  where $faculty/@FID = 'F003' or $faculty/@FID = 'F007'
+  return
+    <Faculty>
+      <FNAME>{$faculty/FNAME/text()}</FNAME>
+      <FEmail>{$faculty/FEmail/text()}</FEmail>
+  3    4    5    6    7    8      </Faculty>
+  9  /
+
+Result Sequence
+--------------------------------------------------------------------------------
+<Faculty><FNAME>Engineering</FNAME><FEmail>enginnering@yorku.ca</FEmail></Facult
+y>
+
+<Faculty><FNAME>Education</FNAME><FEmail>education@yorku.ca</FEmail></Faculty>
+
+xquery
+  for $faculty in doc('/public/mil3/faculty.xml')//FacultyID
+  where $faculty/FNAME = 'Law'
+  return
+    <Faculty>
+      <FacultyID>{$faculty/@FID}</FacultyID>
+      <FNAME>{$faculty/FNAME/text()}</FNAME>
+      <FEmail>{$faculty/FEmail/text()}</FEmail>
+  2    3    4    5    6    7    8    9      </Faculty>
+ 10  /
+
+Result Sequence
+--------------------------------------------------------------------------------
+<Faculty><FacultyID FID="F005"></FacultyID><FNAME>Law</FNAME><FEmail>enginnering
+@yorku.ca</FEmail></Faculty>
+
+
+xquery
+  for $faculty in doc('/public/mil3/faculty.xml')//FacultyID
+  return
+    <Faculty>
+      <FNAME>{$faculty/FNAME/text()}</FNAME>
+      <FEmail>{$faculty/FEmail/text()}</FEmail>
+  2    3    4    5    6    7      </Faculty>
+  8  /
+
+Result Sequence
+--------------------------------------------------------------------------------
+<Faculty><FNAME>Liberal Arts and Prof. Study</FNAME><FEmail>lapds@yorku.ca</FEma
+il></Faculty>
+
+<Faculty><FNAME>Liberal Arts and Prof. Study</FNAME><FEmail>lapds@yorku.ca</FEma
+il></Faculty>
+
+<Faculty><FNAME>Engineering</FNAME><FEmail>enginnering@yorku.ca</FEmail></Facult
+y>
+
+<Faculty><FNAME>Engineering</FNAME><FEmail>enginnering@yorku.ca</FEmail></Facult
+y>
+
+<Faculty><FNAME>Law</FNAME><FEmail>enginnering@yorku.ca</FEmail></Faculty>
+<Faculty><FNAME>Health</FNAME><FEmail>health@yorku.ca</FEmail></Faculty>
+<Faculty><FNAME>Education</FNAME><FEmail>education@yorku.ca</FEmail></Faculty>
+<Faculty><FNAME>Graduate Studies</FNAME><FEmail>graduatestudies@yorku.ca</FEmail
+></Faculty>
+
+
+8 item(s) selected.
+
+xquery
+  for $faculty in doc('/public/mil3/faculty.xml')//FacultyID
+  where $faculty/@FID = 'F003' or $faculty/@FID = 'F007'
+  return
+    $faculty/FNAME/text(), $faculty/FEmail/text()
+  2    3    4    5    6  /
+ERROR:
+ORA-19228: XPST0008 - undeclared identifier: prefix 'faculty' local-name ''
+
+
+xquery
+  for $faculty in doc('/public/mil3/faculty.xml')//FacultyID
+  where $faculty/@FID = 'F003' or $faculty/@FID = 'F007'
+  return
+  2    3    4    5      $f/FNAME/text(), $f/FEmail/text()
+  6  /
+ERROR:
+ORA-19228: XPST0008 - undeclared identifier: prefix 'f' local-name ''
+
+
+SQL> xquery
+ for $faculty in doc('/public/mil3/faculty.xml')//FacultyID
+  where $faculty/@FID = 'F003' or $faculty/@FID = 'F007'
+  return
+  3    4    5      $faculty/FNAME/text(), $faculty/FEmail/text()
+  6  /
+ERROR:
+ORA-19228: XPST0008 - undeclared identifier: prefix 'faculty' local-name ''
+
+
+xquery
+  for $faculty in doc('/public/mil3/faculty.xml')//FacultyID
+  where $faculty/@FID = 'F003' or $faculty/@FID = 'F007'
+  return
+    $faculty/FNAME/text(), $faculty/FEmail/text()
+  2    3    4    5    6  /
+ERROR:
+ORA-19228: XPST0008 - undeclared identifier: prefix 'faculty' local-name ''
+
+
+xquery
+  for $faculty in doc('/public/mil3/faculty.xml')//FacultyID
+  where $faculty/@FID = 'F003' or $faculty/@FID = 'F007'
+  return
+    $faculty/FNAME/text(), $faculty/FEmail/text()
+  2    3    4    5    6  
+  7  /
+ERROR:
+ORA-19228: XPST0008 - undeclared identifier: prefix 'faculty' local-name ''
+
+
+xquery
+  for $faculty in doc('/public/mil3/faculty.xml')//FacultyID
+  where $faculty/@FID = 'F003' or $faculty/@FID = 'F007'
+  return
+    ($faculty/FNAME/text(), $faculty/FEmail/text())
+  2    3    4    5    6  /
+
+Result Sequence
+--------------------------------------------------------------------------------
+Engineering
+enginnering@yorku.ca
+Education
+education@yorku.ca
+
+xquery
+  for $student in doc('/public/mil3/student.xml')//StudentID
+  where $student/@ID = 'S005' or $student/@ID = 'S006' or $student/@ID = 'S007'
+  return
+    ($student/Sname/text(), $student/Email/text())
+  2    3    4    5    6  /
+
+Result Sequence
+--------------------------------------------------------------------------------
+Elly
+elly.mars@yorku.ca
+Kim
+ki.hawk@yorku.ca
+Zey
+zey.tan@yorku.ca
+
+6 item(s) selected.
+
+xquery
+  let $students := doc('/public/mil3/student.xml')//StudentID
+  let $faculty := doc('/public/mil3/faculty.xml')//FacultyID
+  where $students/@ID = 'S005' or $students/@ID = 'S006' or $students/@ID = 'S007'
+     and ($faculty/@FID = 'F003' or $faculty/@FID = 'F007')
+  return
+    ($students/Sname/text(), $students/Email/text(), $faculty/FNAME/text(), $faculty/FEmail/text())
+  2    3    4    5    6    7    8  /
+
+Result Sequence
+--------------------------------------------------------------------------------
+Deniz
+Tom
+Daniel
+Regan
+Elly
+Kim
+Zey
+Adrian
+Mesut
+Tengri
+demiz.kaylu@yorku.ca
+tom.mills@yorku.ca
+daniel.witsell@yorku.ca
+regan.corn@yorku.ca
+elly.mars@yorku.ca
+ki.hawk@yorku.ca
+zey.tan@yorku.ca
+adrian.joy@yorku.ca
+mesut.dag@yorku.ca
+tengri.ay@yorku.ca
+Liberal Arts and Prof. Study
+Liberal Arts and Prof. Study
+Engineering
+Engineering
+Law
+Health
+Education
+Graduate Studies
+lapds@yorku.ca
+lapds@yorku.ca
+enginnering@yorku.ca
+enginnering@yorku.ca
+enginnering@yorku.ca
+health@yorku.ca
+education@yorku.ca
+graduatestudies@yorku.ca
+
+36 item(s) selected.
+
+xquery
+  let $students := doc('/public/mil3/student.xml')//StudentID[GPA > 3.5]
+  let $faculty := doc('/public/mil3/faculty.xml')//FacultyID[FNAME = 'Engineering']
+  return
+    ($students/Sname/text(), $students/Email/text(), $faculty/FNAME/text(), $faculty/FEmail/text())
+  2    3    4    5    6  /
+
+Result Sequence
+--------------------------------------------------------------------------------
+Daniel
+Zey
+daniel.witsell@yorku.ca
+zey.tan@yorku.ca
+Engineering
+Engineering
+enginnering@yorku.ca
+enginnering@yorku.ca
+
+8 item(s) selected.
+
+
+ xquery
+  let $students := doc('/public/mil3/student.xml')//StudentID[GPA < 2]
+  let $faculty := doc('/public/mil3/faculty.xml')//FacultyID[FNAME = 'Health']
+  return
+  2    3    4    5      ($students/Sname/text(), $students/Email/text(), $faculty/FNAME/text())
+  6  /
+
+Result Sequence
+--------------------------------------------------------------------------------
+Regan
+Elly
+regan.corn@yorku.ca
+elly.mars@yorku.ca
+Health
+

@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<Student>
+  <StudentID ID="S001">
+    <Sname>Deniz</Sname>
+    <Surname>Kaylu</Surname>
+    <Email>demiz.kaylu@yorku.ca</Email>
+    <GPA>2.75</GPA>
+  </StudentID>
+  <StudentID ID="S002">
+    <Sname>Tom</Sname>
+    <Surname>Mills</Surname>
+    <Email>tom.mills@yorku.ca</Email>
+    <GPA>3.18</GPA>
+  </StudentID>
+  <StudentID ID="S003">
+    <Sname>Daniel</Sname>
+    <Surname>Witsell</Surname>
+    <Email>daniel.witsell@yorku.ca</Email>
+    <GPA>3.88</GPA>
+  </StudentID>
+  <StudentID ID="S004">
+    <Sname>Regan</Sname>
+    <Surname>Corn</Surname>
+    <Email>regan.corn@yorku.ca</Email>
+    <GPA>1.65</GPA>
+  </StudentID>
+  <StudentID ID="S005">
+    <Sname>Elly</Sname>
+    <Surname>Mars</Surname>
+    <Email>elly.mars@yorku.ca</Email>
+    <GPA>1.49</GPA>
+  </StudentID>
+  <StudentID ID="S006">
+    <Sname>Kim</Sname>
+    <Surname>Hawk</Surname>
+    <Email>ki.hawk@yorku.ca</Email>
+    <GPA>2.34</GPA>
+  </StudentID>
+  <StudentID ID="S007">
+    <Sname>Zey</Sname>
+    <Surname>Tan</Surname>
+    <Email>zey.tan@yorku.ca</Email>
+    <GPA>3.97</GPA>
+  </StudentID>
+  <StudentID ID="S008">
+    <Sname>Adrian</Sname>
+    <Surname>Joy</Surname>
+    <Email>adrian.joy@yorku.ca</Email>
+    <GPA>3.18</GPA>
+  </StudentID>
+  <StudentID ID="S009">
+    <Sname>Mesut</Sname>
+    <Surname>Dag</Surname>
+    <Email>mesut.dag@yorku.ca</Email>
+    <GPA>2.94</GPA>
+  </StudentID>
+  <StudentID ID="S010">
+     <Sname>Tengri</Sname>
+    <Surname>Ay</Surname>
+    <Email>tengri.ay@yorku.ca</Email>
+    <GPA>2.17</GPA>
+  </StudentID>
+</Student>
